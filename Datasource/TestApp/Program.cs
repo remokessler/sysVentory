@@ -11,7 +11,7 @@ namespace TestApp {
             // asynchrone Variante
             Data.ReadAsync(Callback);
 
-            Console.ReadKey();
+            Console.ReadLine();
         }
 
         private static void Callback(Data data) {
