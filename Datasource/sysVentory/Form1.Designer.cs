@@ -28,41 +28,68 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            this.LblComputerName = new System.Windows.Forms.Label();
+            this.LstComputerName = new System.Windows.Forms.ListBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // LblComputerName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 3);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "ProzessorInfo";
+            this.LblComputerName.AutoSize = true;
+            this.LblComputerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblComputerName.Location = new System.Drawing.Point(11, 9);
+            this.LblComputerName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LblComputerName.Name = "LblComputerName";
+            this.LblComputerName.Size = new System.Drawing.Size(153, 20);
+            this.LblComputerName.TabIndex = 0;
+            this.LblComputerName.Text = "Choose Computer";
             // 
-            // listBox1
+            // LstComputerName
             // 
-            this.listBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(13, 28);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(694, 329);
-            this.listBox1.TabIndex = 1;
+            this.LstComputerName.BackColor = System.Drawing.SystemColors.Control;
+            this.LstComputerName.FormattingEnabled = true;
+            this.LstComputerName.Location = new System.Drawing.Point(13, 41);
+            this.LstComputerName.Margin = new System.Windows.Forms.Padding(2);
+            this.LstComputerName.Name = "LstComputerName";
+            this.LstComputerName.Size = new System.Drawing.Size(685, 316);
+            this.LstComputerName.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(623, 362);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Show details";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(542, 362);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(75, 23);
+            this.button5.TabIndex = 10;
+            this.button5.Text = "New Scan";
+            this.button5.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(718, 366);
-            this.Controls.Add(this.listBox1);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(718, 394);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.LstComputerName);
+            this.Controls.Add(this.LblComputerName);
             this.Enabled = false;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "sysInventory";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -70,8 +97,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.Label LblComputerName;
+        private System.Windows.Forms.ListBox LstComputerName;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button5;
     }
 }
 

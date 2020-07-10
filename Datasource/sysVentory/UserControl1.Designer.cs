@@ -36,15 +36,14 @@
             this.button4 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(16, 18);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(56, 19);
             this.button1.TabIndex = 0;
@@ -55,11 +54,11 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Location = new System.Drawing.Point(16, 55);
-            this.checkBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBox1.Margin = new System.Windows.Forms.Padding(2);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(80, 17);
+            this.checkBox1.Size = new System.Drawing.Size(72, 17);
             this.checkBox1.TabIndex = 1;
-            this.checkBox1.Text = "checkBox1";
+            this.checkBox1.Text = "Prozessor";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // label1
@@ -74,8 +73,8 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(92, 18);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Location = new System.Drawing.Point(93, 18);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(56, 19);
             this.button2.TabIndex = 3;
@@ -122,24 +121,6 @@
             this.label4.TabIndex = 8;
             this.label4.Text = ">";
             // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(471, 384);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 23);
-            this.button5.TabIndex = 9;
-            this.button5.Text = "New Scan";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(552, 384);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 10;
-            this.button6.Text = "Compare";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
             // button7
             // 
             this.button7.Location = new System.Drawing.Point(633, 384);
@@ -149,13 +130,21 @@
             this.button7.Text = "Delete";
             this.button7.UseVisualStyleBackColor = true;
             // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(633, 16);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(75, 23);
+            this.button8.TabIndex = 12;
+            this.button8.Text = "Exit";
+            this.button8.UseVisualStyleBackColor = true;
+            // 
             // UserControl1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button4);
@@ -164,9 +153,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UserControl1";
-            this.Size = new System.Drawing.Size(720, 420);
+            this.Size = new System.Drawing.Size(721, 420);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -182,8 +171,7 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
     }
 }
