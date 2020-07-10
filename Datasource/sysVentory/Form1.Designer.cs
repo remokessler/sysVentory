@@ -83,13 +83,11 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.LstComputerName);
             this.Controls.Add(this.LblComputerName);
-            this.Enabled = false;
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "sysInventory";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
