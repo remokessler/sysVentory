@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace sysVentory
 {
-    public partial class UserControl1 : UserControl
+    public partial class ScanOverview : UserControl
     {
-        public UserControl1()
+        public ScanOverview()
         {
             InitializeComponent();
         }

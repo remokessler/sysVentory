@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace sysVentory
 {
-    public partial class Form1 : Form
+    public partial class sysInventoryForm : Form
     {
-        public Form1()
+        public sysInventoryForm()
         {
             InitializeComponent();
         }
