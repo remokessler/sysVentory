@@ -36,10 +36,12 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.CmdExit = new System.Windows.Forms.Button();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.LstName = new System.Windows.Forms.ListBox();
+            this.LstValue = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.CmdSoftware = new System.Windows.Forms.Button();
+            this.LblFile1 = new System.Windows.Forms.Label();
+            this.LblFile2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // CmdProcessor
@@ -121,21 +123,21 @@
             this.CmdExit.Text = "Exit";
             this.CmdExit.UseVisualStyleBackColor = true;
             // 
-            // listBox1
+            // LstName
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(16, 61);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(313, 329);
-            this.listBox1.TabIndex = 13;
+            this.LstName.FormattingEnabled = true;
+            this.LstName.Location = new System.Drawing.Point(16, 61);
+            this.LstName.Name = "LstName";
+            this.LstName.Size = new System.Drawing.Size(313, 329);
+            this.LstName.TabIndex = 13;
             // 
-            // listBox2
+            // LstValue
             // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(391, 61);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(313, 329);
-            this.listBox2.TabIndex = 14;
+            this.LstValue.FormattingEnabled = true;
+            this.LstValue.Location = new System.Drawing.Point(391, 74);
+            this.LstValue.Name = "LstValue";
+            this.LstValue.Size = new System.Drawing.Size(313, 316);
+            this.LstValue.TabIndex = 14;
             // 
             // label3
             // 
@@ -157,14 +159,34 @@
             this.CmdSoftware.Text = "Software";
             this.CmdSoftware.UseVisualStyleBackColor = true;
             // 
+            // LblFile1
+            // 
+            this.LblFile1.AutoSize = true;
+            this.LblFile1.Location = new System.Drawing.Point(391, 61);
+            this.LblFile1.Name = "LblFile1";
+            this.LblFile1.Size = new System.Drawing.Size(30, 13);
+            this.LblFile1.TabIndex = 17;
+            this.LblFile1.Text = "Date";
+            // 
+            // LblFile2
+            // 
+            this.LblFile2.AutoSize = true;
+            this.LblFile2.Location = new System.Drawing.Point(547, 61);
+            this.LblFile2.Name = "LblFile2";
+            this.LblFile2.Size = new System.Drawing.Size(30, 13);
+            this.LblFile2.TabIndex = 18;
+            this.LblFile2.Text = "Date";
+            // 
             // ScanOverview
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.LblFile2);
+            this.Controls.Add(this.LblFile1);
             this.Controls.Add(this.CmdSoftware);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.listBox2);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.LstValue);
+            this.Controls.Add(this.LstName);
             this.Controls.Add(this.CmdExit);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label2);
@@ -191,9 +213,11 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button CmdExit;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.ListBox LstName;
+        private System.Windows.Forms.ListBox LstValue;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button CmdSoftware;
+        private System.Windows.Forms.Label LblFile1;
+        private System.Windows.Forms.Label LblFile2;
     }
 }

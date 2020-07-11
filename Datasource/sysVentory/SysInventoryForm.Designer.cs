@@ -65,6 +65,7 @@
             this.CmdShowDetails.TabIndex = 2;
             this.CmdShowDetails.Text = "Show details";
             this.CmdShowDetails.UseVisualStyleBackColor = true;
+            this.CmdShowDetails.Click += new System.EventHandler(this.CmdShowDetails_Click);
             // 
             // CmdNewScan
             // 

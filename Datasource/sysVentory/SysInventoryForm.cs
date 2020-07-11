@@ -16,5 +16,10 @@ namespace sysVentory
         {
             InitializeComponent();
         }
+
+        private void CmdShowDetails_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
