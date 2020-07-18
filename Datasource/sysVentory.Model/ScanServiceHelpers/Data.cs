@@ -4,9 +4,9 @@ using System.Management;
 using System.Threading.Tasks;
 using Microsoft.Win32;
 
-namespace Datasource
+namespace sysVentory.Model.ScanServiceHelpers
 {
-    public class Data : List<Item>
+    internal class Data : List<Item>
     {
         const string registry_key = @"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall";
 

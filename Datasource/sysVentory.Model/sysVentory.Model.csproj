@@ -4,12 +4,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{33F593E3-B570-484C-9365-75C0267328B5}</ProjectGuid>
+    <ProjectGuid>{B2C26DD7-9A00-4A13-83E1-1E3A27A67B56}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Datasource</RootNamespace>
-    <AssemblyName>Datasource</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <RootNamespace>sysVentory.Model</RootNamespace>
+    <AssemblyName>sysVentory.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
@@ -42,10 +45,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data.cs" />
-    <Compile Include="Item.cs" />
-    <Compile Include="ItemProperty.cs" />
+    <Compile Include="ComputerService.cs" />
+    <Compile Include="DataBaseService.cs" />
+    <Compile Include="Definitions\Computer.cs" />
+    <Compile Include="Definitions\IComputer.cs" />
+    <Compile Include="Definitions\IComputerService.cs" />
+    <Compile Include="Definitions\IDataBaseService.cs" />
+    <Compile Include="Definitions\IScan.cs" />
+    <Compile Include="Definitions\IScanInformation.cs" />
+    <Compile Include="Definitions\IScanInformationGroup.cs" />
+    <Compile Include="Definitions\Scan.cs" />
+    <Compile Include="Definitions\ScanInformationGroup.cs" />
+    <Compile Include="Definitions\IScanService.cs" />
+    <Compile Include="ScanService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScanServiceHelpers\Data.cs" />
+    <Compile Include="ScanServiceHelpers\Item.cs" />
+    <Compile Include="ScanServiceHelpers\ItemProperty.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
