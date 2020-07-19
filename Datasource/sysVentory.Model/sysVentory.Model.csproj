@@ -47,15 +47,19 @@
   <ItemGroup>
     <Compile Include="ComputerService.cs" />
     <Compile Include="DataBaseService.cs" />
-    <Compile Include="Definitions\Computer.cs" />
+    <Compile Include="Definitions\Types\Computer.cs" />
     <Compile Include="Definitions\IComputer.cs" />
     <Compile Include="Definitions\IComputerService.cs" />
     <Compile Include="Definitions\IDataBaseService.cs" />
     <Compile Include="Definitions\IScan.cs" />
     <Compile Include="Definitions\IScanInformation.cs" />
     <Compile Include="Definitions\IScanInformationGroup.cs" />
-    <Compile Include="Definitions\Scan.cs" />
-    <Compile Include="Definitions\ScanInformationGroup.cs" />
+    <Compile Include="Definitions\Types\Deserializer\ScanConverter.cs" />
+    <Compile Include="Definitions\Types\Deserializer\ScanInformationConverter.cs" />
+    <Compile Include="Definitions\Types\Deserializer\ScanInformationGroup.cs" />
+    <Compile Include="Definitions\Types\Scan.cs" />
+    <Compile Include="Definitions\Types\ScanInformation.cs" />
+    <Compile Include="Definitions\Types\ScanInformationGroup.cs" />
     <Compile Include="Definitions\IScanService.cs" />
     <Compile Include="ScanService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -66,5 +70,6 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

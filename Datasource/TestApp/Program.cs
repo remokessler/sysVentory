@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Net.NetworkInformation;
-using sysVentory.Model;
+using sysVentory.Controller;
 
 namespace TestApp
 {
@@ -9,8 +9,8 @@ namespace TestApp
     {
         static void Main(string[] args)
         {
-            ScanService serv = new ScanService(new DataBaseService());
-            Console.WriteLine(serv.NewScan(_currentMacAddress));
+            var computerController = new ComputerController();
+            Console.WriteLine(computerController.NewScan(_currentMacAddress));
             Console.ReadLine();
         }
         private static string _currentMacAddress => NetworkInterface.GetAllNetworkInterfaces()

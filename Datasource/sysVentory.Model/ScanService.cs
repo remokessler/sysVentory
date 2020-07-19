@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using sysVentory.Model.Definitions;
+using sysVentory.Model.Definitions.Types;
 using sysVentory.Model.ScanServiceHelpers;
 
 namespace sysVentory.Model

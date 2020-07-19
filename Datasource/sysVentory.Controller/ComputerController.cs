@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using sysVentory.Model;
 using sysVentory.Model.Definitions;
 
 namespace sysVentory.Controller
@@ -9,10 +10,13 @@ namespace sysVentory.Controller
         private IScanService _scanService { get; set; }
         private IComputerService _computerService { get; set; }
 
-        public ComputerController(IScanService scanService, IComputerService computerService)
+        public ComputerController(IScanService scanService = null,
+            IComputerService computerService = null, 
+            IDataBaseService dataBaseService = null)
         {
-            _scanService = scanService;
-            _computerService = computerService;
+            dataBaseService = dataBaseService ?? new DataBaseService();
+            _scanService = scanService ?? new ScanService(dataBaseService);
+            _computerService = computerService ?? new ComputerService(dataBaseService);
         }
 
         public IScan NewScan(string macAddress)

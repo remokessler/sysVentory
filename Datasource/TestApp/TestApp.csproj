@@ -50,6 +50,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\sysVentory.Controller\sysVentory.Controller.csproj">
+      <Project>{89D5DC02-B81C-428D-B3DD-E11844F3C93C}</Project>
+      <Name>sysVentory.Controller</Name>
+    </ProjectReference>
     <ProjectReference Include="..\sysVentory.Model\sysVentory.Model.csproj">
       <Project>{B2C26DD7-9A00-4A13-83E1-1E3A27A67B56}</Project>
       <Name>sysVentory.Model</Name>
