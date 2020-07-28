@@ -5,7 +5,7 @@ using sysVentory.Model.Definitions;
 
 namespace sysVentory.Controller
 {
-    public class ComputerController
+    public class ComputerController : IComputerController
     {
         private IScanService _scanService { get; set; }
         private IComputerService _computerService { get; set; }
@@ -29,7 +29,7 @@ namespace sysVentory.Controller
             return _computerService.GetComputer(condition);
         }
 
-        public IEnumerable<IComputer> GetComputers(Func<IComputer, bool> condition)
+        public IEnumerable<IComputer> GetComputers(Func<IComputer, bool> condition = null)
         {
             return _computerService.GetComputers(condition);
         }
