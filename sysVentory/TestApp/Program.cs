@@ -11,6 +11,7 @@ namespace TestApp
         {
             var computerController = new ComputerController();
             Console.WriteLine(computerController.NewScan(_currentMacAddress));
+            Console.WriteLine(computerController.GetComputers());
             Console.ReadLine();
         }
         private static string _currentMacAddress => NetworkInterface.GetAllNetworkInterfaces()

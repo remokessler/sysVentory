@@ -29,27 +29,38 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
+            this.PnlContent = new System.Windows.Forms.Panel();
             this.exit1 = new sysVentory.Exit();
             this.SuspendLayout();
+            // 
+            // PnlContent
+            // 
+            this.PnlContent.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.PnlContent.Location = new System.Drawing.Point(0, 84);
+            this.PnlContent.Name = "PnlContent";
+            this.PnlContent.Size = new System.Drawing.Size(1329, 685);
+            this.PnlContent.TabIndex = 1;
             // 
             // exit1
             // 
             this.exit1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.exit1.Location = new System.Drawing.Point(908, 12);
+            this.exit1.Location = new System.Drawing.Point(1211, 15);
+            this.exit1.Margin = new System.Windows.Forms.Padding(5);
             this.exit1.Name = "exit1";
-            this.exit1.Size = new System.Drawing.Size(77, 40);
+            this.exit1.Size = new System.Drawing.Size(103, 49);
             this.exit1.TabIndex = 0;
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(997, 625);
+            this.ClientSize = new System.Drawing.Size(1329, 769);
             this.ControlBox = false;
+            this.Controls.Add(this.PnlContent);
             this.Controls.Add(this.exit1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Main";
             this.Text = "sysInventory";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -60,6 +71,7 @@
         #endregion
 
         private Exit exit1;
+        private System.Windows.Forms.Panel PnlContent;
     }
 }
 

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using sysVentory.Views;
 
 namespace sysVentory
 {
@@ -15,6 +16,15 @@ namespace sysVentory
         public Main()
         {
             InitializeComponent();
+            NavigateTo(new ScanOverview());
+        }
+
+        private void NavigateTo(Form form)
+        {
+            form.TopLevel = false;
+            PnlContent.Controls.Clear();
+            PnlContent.Controls.Add(form);
+            form.Show();
         }
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using sysVentory.Model.Definitions;
+using sysVentory.Model.Definitions.Types;
 
 namespace sysVentory.Model
 {

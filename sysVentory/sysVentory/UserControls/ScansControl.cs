@@ -7,27 +7,22 @@ namespace sysVentory
 {
     public partial class ScansControl : UserControl
     {
-        //private IComputerController _computerController { get; set; }
-        public ScansControl()//IComputerController computerController)
+        private IComputerController _computerController { get; set; }
+        public ScansControl(IComputerController computerController = null)
         {
             InitializeComponent();
-            //_computerController = computerController;
+            _computerController = computerController ?? new ComputerController();
             LoadData();
         }
-        //public ScansControl() : this(new ComputerController()) { }
+
         private void CmdNewScan_Click(object sender, EventArgs e)
         {
-            //NewScan();
+            _computerController.NewScan(MacAddressHelper.Instance.Current);
         }
-        private void NewScan()
+        private async void LoadData()
         {
-            //_computerController.NewScan(MacAddressService.Instance.GetCurrent);
-        }
-        private void LoadData()
-        {
-            //string[] test = LoadScans.Instance.List;
-            //LstScans.Items.AddRange(test);
-            LstScans.Items.AddRange(LoadScans.Instance.List);
+            //string[] computerNames = _computerController.GetComputers().Select(c => c.name);
+            //LstScans.Items.AddRange(computerNames);
         }
     }
 }
