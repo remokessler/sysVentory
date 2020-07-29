@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
+using sysVentory.Helper;
 using sysVentory.Views;
 
 namespace sysVentory
@@ -16,15 +9,27 @@ namespace sysVentory
         public Main()
         {
             InitializeComponent();
-            NavigateTo(new ScanOverview());
+            pnlScanedComputers.Dock = DockStyle.Top | DockStyle.Left | DockStyle.Bottom;
+            LoadComputers(new ScanedComputers());
+            LoadHistory(new ScanHistory());
         }
 
-        private void NavigateTo(Form form)
+        public void LoadComputers(Form form)
         {
             form.TopLevel = false;
-            PnlContent.Controls.Clear();
-            PnlContent.Controls.Add(form);
+            form.Dock = DockStyle.Fill;
+            pnlScanedComputers.Controls.Add(form);
             form.Show();
+            return;
+        }
+
+        public void LoadHistory(Form form)
+        {
+            form.TopLevel = false;
+            form.Dock = DockStyle.Fill;
+            pnlScanHistroy.Controls.Add(form);
+            form.Show();
+            return;
         }
     }
 }

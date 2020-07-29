@@ -29,40 +29,46 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-            this.PnlContent = new System.Windows.Forms.Panel();
-            this.exit1 = new sysVentory.Exit();
+            this.pnlScanedComputers = new System.Windows.Forms.Panel();
+            this.pnlScanHistroy = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
-            // PnlContent
+            // pnlScanedComputers
             // 
-            this.PnlContent.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PnlContent.Location = new System.Drawing.Point(0, 84);
-            this.PnlContent.Name = "PnlContent";
-            this.PnlContent.Size = new System.Drawing.Size(1329, 685);
-            this.PnlContent.TabIndex = 1;
+            this.pnlScanedComputers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlScanedComputers.Location = new System.Drawing.Point(0, 0);
+            this.pnlScanedComputers.Name = "pnlScanedComputers";
+            this.pnlScanedComputers.Size = new System.Drawing.Size(256, 514);
+            this.pnlScanedComputers.TabIndex = 1;
             // 
-            // exit1
+            // pnlScanHistroy
             // 
-            this.exit1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.exit1.Location = new System.Drawing.Point(1211, 15);
-            this.exit1.Margin = new System.Windows.Forms.Padding(5);
-            this.exit1.Name = "exit1";
-            this.exit1.Size = new System.Drawing.Size(103, 49);
-            this.exit1.TabIndex = 0;
+            this.pnlScanHistroy.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlScanHistroy.Location = new System.Drawing.Point(256, 0);
+            this.pnlScanHistroy.Name = "pnlScanHistroy";
+            this.pnlScanHistroy.Size = new System.Drawing.Size(632, 514);
+            this.pnlScanHistroy.TabIndex = 3;
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1329, 769);
-            this.ControlBox = false;
-            this.Controls.Add(this.PnlContent);
-            this.Controls.Add(this.exit1);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.ClientSize = new System.Drawing.Size(884, 511);
+            this.Controls.Add(this.pnlScanHistroy);
+            this.Controls.Add(this.pnlScanedComputers);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.IsMdiContainer = true;
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.MinimumSize = new System.Drawing.Size(900, 550);
             this.Name = "Main";
             this.Text = "sysInventory";
+            this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
 
@@ -70,8 +76,8 @@
 
         #endregion
 
-        private Exit exit1;
-        private System.Windows.Forms.Panel PnlContent;
+        private System.Windows.Forms.Panel pnlScanedComputers;
+        private System.Windows.Forms.Panel pnlScanHistroy;
     }
 }
 
