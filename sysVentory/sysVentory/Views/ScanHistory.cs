@@ -14,6 +14,8 @@ namespace sysVentory.Views
         public void cmdNewScan_Click(object sender, EventArgs e)
         {
             ControllerHelper.Instance.ComputerController.NewScan(MacAddressHelper.Instance.Current);
+            //TODO interface between the two Views
+            lstScanHistroy.Items.AddRange(new UpdateLstHelper().computerNames);
             MessageBox.Show("Scan successfully done", "Success");
         }
     }

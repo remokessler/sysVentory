@@ -31,6 +31,7 @@
             this.lstScanHistroy = new System.Windows.Forms.ListBox();
             this.cmdNewScan = new MaterialSkin.Controls.MaterialRaisedButton();
             this.cmdCompare = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.cmdDelete = new MaterialSkin.Controls.MaterialRaisedButton();
             this.SuspendLayout();
             // 
             // lstScanHistroy
@@ -76,12 +77,25 @@
             this.cmdCompare.Text = "Compare";
             this.cmdCompare.UseVisualStyleBackColor = true;
             // 
+            // cmdDelete
+            // 
+            this.cmdDelete.Depth = 0;
+            this.cmdDelete.Location = new System.Drawing.Point(255, 15);
+            this.cmdDelete.MouseState = MaterialSkin.MouseState.HOVER;
+            this.cmdDelete.Name = "cmdDelete";
+            this.cmdDelete.Primary = true;
+            this.cmdDelete.Size = new System.Drawing.Size(90, 30);
+            this.cmdDelete.TabIndex = 3;
+            this.cmdDelete.Text = "Delete";
+            this.cmdDelete.UseVisualStyleBackColor = true;
+            // 
             // ScanHistory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
             this.ClientSize = new System.Drawing.Size(750, 450);
+            this.Controls.Add(this.cmdDelete);
             this.Controls.Add(this.cmdCompare);
             this.Controls.Add(this.cmdNewScan);
             this.Controls.Add(this.lstScanHistroy);
@@ -97,5 +111,6 @@
         private System.Windows.Forms.ListBox lstScanHistroy;
         private MaterialSkin.Controls.MaterialRaisedButton cmdNewScan;
         private MaterialSkin.Controls.MaterialRaisedButton cmdCompare;
+        private MaterialSkin.Controls.MaterialRaisedButton cmdDelete;
     }
 }
