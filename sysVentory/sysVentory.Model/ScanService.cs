@@ -39,19 +39,5 @@ namespace sysVentory.Model
             _dataBaseService.AddScan(scan, macAddress);
             return scan;
         }
-
-        [Obsolete]
-        private void Callback(Data data)
-        {
-            var s = new StringBuilder();
-            foreach (var item in data)
-            {
-                s.Append(Environment.NewLine + item.Type);
-                foreach (var prop in item.Properties)
-                {
-                    s.Append(Environment.NewLine + $"       {prop.Name}: {prop.Value}");
-                }
-            }
-        }
     }
 }

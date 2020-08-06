@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Definitions\Scan.cs" />
     <Compile Include="ComputerController.cs" />
+    <Compile Include="IComputerController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -49,7 +49,7 @@ namespace sysVentory.Model
         public IEnumerable<IComputer> GetComputers(Func<IComputer, bool> condition = null)
         {
             return Directory.GetFiles(_basePath)
-                .Select(n => JsonConvert.DeserializeObject(File.ReadAllText(Path.Combine(_basePath, n))) as IComputer)
+                .Select(n => JsonConvert.DeserializeObject<Computer>(File.ReadAllText(Path.Combine(_basePath, n))))
                 .Where(s => condition == null ? true : condition(s));
         }
 
