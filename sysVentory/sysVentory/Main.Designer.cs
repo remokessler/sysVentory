@@ -40,7 +40,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlScanedComputers.Location = new System.Drawing.Point(0, 0);
             this.pnlScanedComputers.Name = "pnlScanedComputers";
-            this.pnlScanedComputers.Size = new System.Drawing.Size(444, 514);
+            this.pnlScanedComputers.Size = new System.Drawing.Size(244, 514);
             this.pnlScanedComputers.TabIndex = 1;
             // 
             // pnlScanHistroy
@@ -48,9 +48,9 @@
             this.pnlScanHistroy.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlScanHistroy.Location = new System.Drawing.Point(444, 0);
+            this.pnlScanHistroy.Location = new System.Drawing.Point(242, 0);
             this.pnlScanHistroy.Name = "pnlScanHistroy";
-            this.pnlScanHistroy.Size = new System.Drawing.Size(440, 514);
+            this.pnlScanHistroy.Size = new System.Drawing.Size(642, 514);
             this.pnlScanHistroy.TabIndex = 3;
             // 
             // Main
@@ -68,7 +68,6 @@
             this.MinimumSize = new System.Drawing.Size(900, 550);
             this.Name = "Main";
             this.Text = "sysInventory";
-            this.TopMost = true;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
 

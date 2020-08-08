@@ -10,16 +10,11 @@ namespace sysVentory.Views
         public ScanedComputers()
         {
             InitializeComponent();
-            UpdateList();
+            //TODO load list when inizialize
         }
-
         private void LstComputerNames_SelectedIndexChanged(object sender, System.EventArgs e)
         {
             ActiveComputer = Convert.ToString(LstComputerNames.SelectedItem);
-        }
-        public void UpdateList()
-        {
-            LstComputerNames.Items.AddRange(new UpdateLstHelper().computerNames);
         }
     }
 }

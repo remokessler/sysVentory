@@ -76,6 +76,7 @@
             this.cmdCompare.TabIndex = 2;
             this.cmdCompare.Text = "Compare";
             this.cmdCompare.UseVisualStyleBackColor = true;
+            this.cmdCompare.Click += new System.EventHandler(this.cmdCompare_Click);
             // 
             // cmdDelete
             // 

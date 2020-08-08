@@ -7,8 +7,7 @@ namespace sysVentory.Helper
         public static ControllerHelper Instance => _instance = _instance ?? new ControllerHelper();
         public IComputerController ComputerController { get; private set; }
         private static ControllerHelper _instance { get; set; }
-
-        private ControllerHelper(IComputerController computerController = null)
+        public ControllerHelper(IComputerController computerController = null)
         {
             ComputerController = computerController ?? new ComputerController();
         }

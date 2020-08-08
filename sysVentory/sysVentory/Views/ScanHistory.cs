@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 using sysVentory.Helper;
 
 namespace sysVentory.Views
@@ -14,9 +15,14 @@ namespace sysVentory.Views
         public void cmdNewScan_Click(object sender, EventArgs e)
         {
             ControllerHelper.Instance.ComputerController.NewScan(MacAddressHelper.Instance.Current);
-            //TODO interface between the two Views
-            lstScanHistroy.Items.AddRange(new UpdateLstHelper().computerNames);
-            MessageBox.Show("Scan successfully done", "Success");
+            MessageBox.Show("Scan successfully done", "Done");
+            //TODO Update List
+        }
+
+        private void cmdCompare_Click(object sender, EventArgs e)
+        {
+            Form form = new FilesCompare();
+            form.Visible = true;
         }
     }
 }

@@ -50,12 +50,12 @@
             // LblComputernames
             // 
             this.LblComputernames.AutoSize = true;
-            this.LblComputernames.Font = new System.Drawing.Font("Ink Free", 14.25F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+            this.LblComputernames.Font = new System.Drawing.Font("Lucida Sans Unicode", 14.25F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblComputernames.ForeColor = System.Drawing.Color.White;
             this.LblComputernames.Location = new System.Drawing.Point(10, 10);
             this.LblComputernames.Name = "LblComputernames";
-            this.LblComputernames.Size = new System.Drawing.Size(155, 23);
+            this.LblComputernames.Size = new System.Drawing.Size(179, 23);
             this.LblComputernames.TabIndex = 1;
             this.LblComputernames.Text = "Select Computer";
             // 

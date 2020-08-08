@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace sysVentory.Views
+namespace sysVentory
 {
-    public partial class File : Form
+    public partial class FilesCompare : Form
     {
-        public File()
+        public FilesCompare()
         {
             InitializeComponent();
         }
