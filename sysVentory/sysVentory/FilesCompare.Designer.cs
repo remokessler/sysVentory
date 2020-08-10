@@ -33,36 +33,44 @@
             this.treFile2 = new System.Windows.Forms.TreeView();
             this.lblFile1 = new System.Windows.Forms.Label();
             this.lblFile2 = new System.Windows.Forms.Label();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
             // treFile1
             // 
-            this.treFile1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.treFile1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.treFile1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
             this.treFile1.Font = new System.Drawing.Font("Leelawadee", 9.75F);
-            this.treFile1.Location = new System.Drawing.Point(12, 37);
+            this.treFile1.Location = new System.Drawing.Point(0, 26);
             this.treFile1.Name = "treFile1";
-            this.treFile1.Size = new System.Drawing.Size(450, 512);
+            this.treFile1.Size = new System.Drawing.Size(467, 488);
             this.treFile1.TabIndex = 0;
             // 
             // treFile2
             // 
-            this.treFile2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.treFile2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.treFile2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
             this.treFile2.Font = new System.Drawing.Font("Leelawadee", 9.75F);
-            this.treFile2.Location = new System.Drawing.Point(522, 37);
+            this.treFile2.Location = new System.Drawing.Point(3, 26);
             this.treFile2.Name = "treFile2";
-            this.treFile2.Size = new System.Drawing.Size(450, 512);
+            this.treFile2.Size = new System.Drawing.Size(483, 488);
             this.treFile2.TabIndex = 1;
             // 
             // lblFile1
             // 
-            this.lblFile1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblFile1.AutoSize = true;
             this.lblFile1.Font = new System.Drawing.Font("Ink Free", 14.25F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFile1.ForeColor = System.Drawing.Color.White;
-            this.lblFile1.Location = new System.Drawing.Point(8, 9);
+            this.lblFile1.Location = new System.Drawing.Point(3, 0);
             this.lblFile1.Name = "lblFile1";
             this.lblFile1.Size = new System.Drawing.Size(25, 23);
             this.lblFile1.TabIndex = 3;
@@ -70,16 +78,36 @@
             // 
             // lblFile2
             // 
-            this.lblFile2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblFile2.AutoSize = true;
             this.lblFile2.Font = new System.Drawing.Font("Ink Free", 14.25F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
                 | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFile2.ForeColor = System.Drawing.Color.White;
-            this.lblFile2.Location = new System.Drawing.Point(518, 9);
+            this.lblFile2.Location = new System.Drawing.Point(3, 0);
             this.lblFile2.Name = "lblFile2";
             this.lblFile2.Size = new System.Drawing.Size(25, 23);
             this.lblFile2.TabIndex = 4;
             this.lblFile2.Text = "...";
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.splitContainer1.Location = new System.Drawing.Point(12, 35);
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.treFile1);
+            this.splitContainer1.Panel1.Controls.Add(this.lblFile1);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.treFile2);
+            this.splitContainer1.Panel2.Controls.Add(this.lblFile2);
+            this.splitContainer1.Size = new System.Drawing.Size(960, 514);
+            this.splitContainer1.SplitterDistance = 470;
+            this.splitContainer1.TabIndex = 5;
             // 
             // FilesCompare
             // 
@@ -87,18 +115,18 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(984, 561);
-            this.Controls.Add(this.lblFile2);
-            this.Controls.Add(this.lblFile1);
-            this.Controls.Add(this.treFile2);
-            this.Controls.Add(this.treFile1);
+            this.Controls.Add(this.splitContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(1000, 600);
-            this.MinimumSize = new System.Drawing.Size(1000, 600);
             this.Name = "FilesCompare";
             this.Text = "FilesCompare";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel1.PerformLayout();
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            this.splitContainer1.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -108,5 +136,6 @@
         private System.Windows.Forms.TreeView treFile2;
         private System.Windows.Forms.Label lblFile1;
         private System.Windows.Forms.Label lblFile2;
+        private System.Windows.Forms.SplitContainer splitContainer1;
     }
 }
