@@ -13,8 +13,14 @@ namespace sysVentory.Views
         {
             InitializeComponent();
             LoadComputers();
+            EventHelper.Instance.OnNewScan += OnNewScan;
         }
-        
+
+        private void OnNewScan(object sender, NewScanEventArgs e)
+        {
+            LoadComputers();
+        }
+
         private void LoadComputers()
         {
             if (LstComputers.Items.Count > 0)

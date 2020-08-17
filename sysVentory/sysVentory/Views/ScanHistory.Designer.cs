@@ -46,7 +46,7 @@
             this.cmdNewScan.TabIndex = 1;
             this.cmdNewScan.Text = "New Scan";
             this.cmdNewScan.UseVisualStyleBackColor = true;
-            this.cmdNewScan.Click += new System.EventHandler(this.cmdNewScan_Click);
+            this.cmdNewScan.Click += new System.EventHandler(this.CmdNewScan_Click);
             // 
             // cmdCompare
             // 
@@ -60,7 +60,7 @@
             this.cmdCompare.TabIndex = 2;
             this.cmdCompare.Text = "Compare";
             this.cmdCompare.UseVisualStyleBackColor = true;
-            this.cmdCompare.Click += new System.EventHandler(this.cmdCompare_Click);
+            this.cmdCompare.Click += new System.EventHandler(this.CmdCompare_Click);
             // 
             // cmdDelete
             // 

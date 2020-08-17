@@ -14,25 +14,28 @@ namespace sysVentory.Views
         public ScanHistory()
         {
             InitializeComponent();
-            EventHelper.Instance.OnSelectedComputerChanged += SelectedComputerChangedEvent;
+            EventHelper.Instance.OnSelectedComputerChanged += SelectedComputerChanged;
         }
 
-        public void cmdNewScan_Click(object sender, EventArgs e)
+        public void CmdNewScan_Click(object sender, EventArgs e)
         {
             ControllerHelper.Instance.ComputerController.NewScan(MacAddressHelper.Instance.Current);
             MessageBox.Show("Scan successfully done", "Done");
-            //TODO Update List
+
+            EventHelper.Instance.EmitNewScan(sender, new NewScanEventArgs());
         }
 
-        private void cmdCompare_Click(object sender, EventArgs e)
+        private void CmdCompare_Click(object sender, EventArgs e)
         {
-            Form form = new FilesCompare();
+            var scan = sender as IScan;
+
+            Form form = new FilesCompare(scan, scan);
             form.Owner = this;
             form.ShowInTaskbar = false;
             form.ShowDialog();
         }
 
-        private void SelectedComputerChangedEvent(object sender, SelectedComputerChangedEventArgs sccea)
+        private void SelectedComputerChanged(object sender, SelectedComputerChangedEventArgs sccea)
         {
             LstScans.Items.Clear();
             var computer = sender as IComputer;

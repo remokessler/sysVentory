@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Events\NewScanEventArgs.cs" />
     <Compile Include="Events\SelectedComputerChangedEventArgs.cs" />
     <Compile Include="FilesCompare.cs">
       <SubType>Form</SubType>
