@@ -1,25 +1,36 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Forms;
+using sysVentory.Events;
 using sysVentory.Helper;
+using sysVentory.Model.Definitions;
 
 namespace sysVentory.Views
 {
     public partial class ScanedComputers : Form
     {
-        public string ActiveComputer { get; private set; }
         public ScanedComputers()
         {
             InitializeComponent();
-            //TODO load list when inizialize
+            LoadComputers();
         }
-        private void LstComputerNames_SelectedIndexChanged(object sender, System.EventArgs e)
+        
+        private void LoadComputers()
         {
-            ActiveComputer = Convert.ToString(LstComputerNames.SelectedItem);
+            if (LstComputers.Items.Count > 0)
+                LstComputers.Items.Clear();
+
+            LstComputers.Items.AddRange(ControllerHelper.Instance.ComputerController
+                                    .GetComputers().Select(c => new ListViewItem(c.Name, c.MacAddress)).ToArray());
         }
 
-        private void ScanedComputers_Load(object sender, EventArgs e)
+        private void LstComputers_SelectedComputerChanged(object sender, EventArgs e)
         {
+            if (LstComputers.SelectedItems == null || LstComputers.SelectedItems.Count <= 0)
+                return;
 
+            var computer = ControllerHelper.Instance.ComputerController.GetComputer(c => c.MacAddress == LstComputers.SelectedItems[0].ImageKey);
+            EventHelper.Instance.EmitSelectedComputerChanged(computer, new SelectedComputerChangedEventArgs());
         }
     }
 }

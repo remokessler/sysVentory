@@ -1,14 +1,12 @@
-﻿using System.Linq;
+﻿using System;
 using System.Windows.Forms;
-using System.Xml.Schema;
-using sysVentory.Controller.Definitions;
-using sysVentory.Helper;
 using sysVentory.Views;
 
 namespace sysVentory
 {
     public partial class Main : Form
     {
+        public EventHandler SelectedComputerChangedHandler { get; set; }
         public Main()
         {
             InitializeComponent();

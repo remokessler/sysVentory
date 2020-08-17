@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Events\SelectedComputerChangedEventArgs.cs" />
     <Compile Include="FilesCompare.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -56,6 +57,7 @@
       <DependentUpon>FilesCompare.cs</DependentUpon>
     </Compile>
     <Compile Include="Helper\ControllerHelper.cs" />
+    <Compile Include="Helper\EventHelper.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
