@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using System.Windows.Forms;
 using sysVentory.Helper;
 
@@ -11,13 +10,16 @@ namespace sysVentory.Views
         public ScanedComputers()
         {
             InitializeComponent();
-            string[] computerNames = ControllerHelper.Instance.ComputerController.GetComputers().Select(c => c.Name).ToArray();
-            LstComputerNames.Items.AddRange(computerNames);
+            //TODO load list when inizialize
         }
-
         private void LstComputerNames_SelectedIndexChanged(object sender, System.EventArgs e)
         {
             ActiveComputer = Convert.ToString(LstComputerNames.SelectedItem);
+        }
+
+        private void ScanedComputers_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

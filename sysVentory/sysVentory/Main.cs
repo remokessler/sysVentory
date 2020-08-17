@@ -1,4 +1,7 @@
-﻿using System.Windows.Forms;
+﻿using System.Linq;
+using System.Windows.Forms;
+using System.Xml.Schema;
+using sysVentory.Controller.Definitions;
 using sysVentory.Helper;
 using sysVentory.Views;
 
@@ -14,22 +17,20 @@ namespace sysVentory
             LoadHistory(new ScanHistory());
         }
 
-        public void LoadComputers(Form form)
+        private void LoadComputers(Form form)
         {
             form.TopLevel = false;
             form.Dock = DockStyle.Fill;
             pnlScanedComputers.Controls.Add(form);
             form.Show();
-            return;
         }
 
-        public void LoadHistory(Form form)
+        private void LoadHistory(Form form)
         {
             form.TopLevel = false;
             form.Dock = DockStyle.Fill;
             pnlScanHistroy.Controls.Add(form);
             form.Show();
-            return;
         }
     }
 }

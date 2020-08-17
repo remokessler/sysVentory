@@ -36,26 +36,25 @@
             // 
             this.LstComputerNames.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.LstComputerNames.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.LstComputerNames.Font = new System.Drawing.Font("Leelawadee", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LstComputerNames.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LstComputerNames.ForeColor = System.Drawing.Color.White;
             this.LstComputerNames.FormattingEnabled = true;
-            this.LstComputerNames.ItemHeight = 19;
-            this.LstComputerNames.Location = new System.Drawing.Point(20, 40);
+            this.LstComputerNames.ItemHeight = 16;
+            this.LstComputerNames.Location = new System.Drawing.Point(20, 60);
             this.LstComputerNames.Margin = new System.Windows.Forms.Padding(2);
             this.LstComputerNames.Name = "LstComputerNames";
-            this.LstComputerNames.Size = new System.Drawing.Size(210, 475);
+            this.LstComputerNames.Size = new System.Drawing.Size(210, 448);
             this.LstComputerNames.TabIndex = 0;
             this.LstComputerNames.SelectedIndexChanged += new System.EventHandler(this.LstComputerNames_SelectedIndexChanged);
             // 
             // LblComputernames
             // 
             this.LblComputernames.AutoSize = true;
-            this.LblComputernames.Font = new System.Drawing.Font("Ink Free", 14.25F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
-                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblComputernames.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblComputernames.ForeColor = System.Drawing.Color.White;
-            this.LblComputernames.Location = new System.Drawing.Point(10, 10);
+            this.LblComputernames.Location = new System.Drawing.Point(15, 20);
             this.LblComputernames.Name = "LblComputernames";
-            this.LblComputernames.Size = new System.Drawing.Size(155, 23);
+            this.LblComputernames.Size = new System.Drawing.Size(171, 25);
             this.LblComputernames.TabIndex = 1;
             this.LblComputernames.Text = "Select Computer";
             // 
@@ -72,6 +71,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ScanedComputers";
             this.Text = "ScanOverview";
+            this.Load += new System.EventHandler(this.ScanedComputers_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

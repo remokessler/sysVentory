@@ -49,6 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FilesCompare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FilesCompare.Designer.cs">
+      <DependentUpon>FilesCompare.cs</DependentUpon>
+    </Compile>
     <Compile Include="Helper\ControllerHelper.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
@@ -83,6 +89,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FilesCompare.resx">
+      <DependentUpon>FilesCompare.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\ScanedComputers.resx">
       <DependentUpon>ScanedComputers.cs</DependentUpon>
     </EmbeddedResource>
