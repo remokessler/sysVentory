@@ -67,24 +67,22 @@
             // lblFile1
             // 
             this.lblFile1.AutoSize = true;
-            this.lblFile1.Font = new System.Drawing.Font("Ink Free", 14.25F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
-                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFile1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFile1.ForeColor = System.Drawing.Color.White;
             this.lblFile1.Location = new System.Drawing.Point(3, 0);
             this.lblFile1.Name = "lblFile1";
-            this.lblFile1.Size = new System.Drawing.Size(25, 23);
+            this.lblFile1.Size = new System.Drawing.Size(25, 24);
             this.lblFile1.TabIndex = 3;
             this.lblFile1.Text = "...";
             // 
             // lblFile2
             // 
             this.lblFile2.AutoSize = true;
-            this.lblFile2.Font = new System.Drawing.Font("Ink Free", 14.25F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
-                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFile2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFile2.ForeColor = System.Drawing.Color.White;
             this.lblFile2.Location = new System.Drawing.Point(3, 0);
             this.lblFile2.Name = "lblFile2";
-            this.lblFile2.Size = new System.Drawing.Size(25, 23);
+            this.lblFile2.Size = new System.Drawing.Size(25, 24);
             this.lblFile2.TabIndex = 4;
             this.lblFile2.Text = "...";
             // 

@@ -22,7 +22,9 @@ namespace sysVentory.Views
         private void cmdCompare_Click(object sender, EventArgs e)
         {
             Form form = new FilesCompare();
-            form.Visible = true;
+            form.Owner = this;
+            form.ShowInTaskbar = false;
+            form.ShowDialog();
         }
     }
 }

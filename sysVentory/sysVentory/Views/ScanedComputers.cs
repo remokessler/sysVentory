@@ -16,5 +16,10 @@ namespace sysVentory.Views
         {
             ActiveComputer = Convert.ToString(LstComputerNames.SelectedItem);
         }
+
+        private void ScanedComputers_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

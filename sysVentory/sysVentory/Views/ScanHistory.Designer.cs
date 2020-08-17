@@ -41,15 +41,15 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lstScanHistroy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
             this.lstScanHistroy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lstScanHistroy.Font = new System.Drawing.Font("Leelawadee", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstScanHistroy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstScanHistroy.ForeColor = System.Drawing.Color.White;
             this.lstScanHistroy.FormattingEnabled = true;
-            this.lstScanHistroy.ItemHeight = 15;
+            this.lstScanHistroy.ItemHeight = 16;
             this.lstScanHistroy.Location = new System.Drawing.Point(15, 60);
             this.lstScanHistroy.MultiColumn = true;
             this.lstScanHistroy.Name = "lstScanHistroy";
             this.lstScanHistroy.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
-            this.lstScanHistroy.Size = new System.Drawing.Size(720, 377);
+            this.lstScanHistroy.Size = new System.Drawing.Size(720, 370);
             this.lstScanHistroy.TabIndex = 0;
             // 
             // cmdNewScan
