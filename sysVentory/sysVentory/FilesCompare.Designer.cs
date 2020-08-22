@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FilesCompare));
-            this.treFile1 = new System.Windows.Forms.TreeView();
-            this.treFile2 = new System.Windows.Forms.TreeView();
-            this.lblFile1 = new System.Windows.Forms.Label();
-            this.lblFile2 = new System.Windows.Forms.Label();
+            this.TreFile1 = new System.Windows.Forms.TreeView();
+            this.TreFile2 = new System.Windows.Forms.TreeView();
+            this.LblFile1 = new System.Windows.Forms.Label();
+            this.LblFile2 = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -40,51 +40,51 @@
             this.splitContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // treFile1
+            // TreFile1
             // 
-            this.treFile1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.TreFile1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.treFile1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
-            this.treFile1.Font = new System.Drawing.Font("Leelawadee", 9.75F);
-            this.treFile1.Location = new System.Drawing.Point(0, 26);
-            this.treFile1.Name = "treFile1";
-            this.treFile1.Size = new System.Drawing.Size(467, 488);
-            this.treFile1.TabIndex = 0;
+            this.TreFile1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
+            this.TreFile1.Font = new System.Drawing.Font("Leelawadee", 9.75F);
+            this.TreFile1.Location = new System.Drawing.Point(0, 26);
+            this.TreFile1.Name = "TreFile1";
+            this.TreFile1.Size = new System.Drawing.Size(467, 488);
+            this.TreFile1.TabIndex = 0;
             // 
-            // treFile2
+            // TreFile2
             // 
-            this.treFile2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.TreFile2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.treFile2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
-            this.treFile2.Font = new System.Drawing.Font("Leelawadee", 9.75F);
-            this.treFile2.Location = new System.Drawing.Point(3, 26);
-            this.treFile2.Name = "treFile2";
-            this.treFile2.Size = new System.Drawing.Size(483, 488);
-            this.treFile2.TabIndex = 1;
+            this.TreFile2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
+            this.TreFile2.Font = new System.Drawing.Font("Leelawadee", 9.75F);
+            this.TreFile2.Location = new System.Drawing.Point(3, 26);
+            this.TreFile2.Name = "TreFile2";
+            this.TreFile2.Size = new System.Drawing.Size(483, 488);
+            this.TreFile2.TabIndex = 1;
             // 
-            // lblFile1
+            // LblFile1
             // 
-            this.lblFile1.AutoSize = true;
-            this.lblFile1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFile1.ForeColor = System.Drawing.Color.White;
-            this.lblFile1.Location = new System.Drawing.Point(3, 0);
-            this.lblFile1.Name = "lblFile1";
-            this.lblFile1.Size = new System.Drawing.Size(25, 24);
-            this.lblFile1.TabIndex = 3;
-            this.lblFile1.Text = "...";
+            this.LblFile1.AutoSize = true;
+            this.LblFile1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblFile1.ForeColor = System.Drawing.Color.White;
+            this.LblFile1.Location = new System.Drawing.Point(3, 0);
+            this.LblFile1.Name = "LblFile1";
+            this.LblFile1.Size = new System.Drawing.Size(25, 24);
+            this.LblFile1.TabIndex = 3;
+            this.LblFile1.Text = "...";
             // 
-            // lblFile2
+            // LblFile2
             // 
-            this.lblFile2.AutoSize = true;
-            this.lblFile2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFile2.ForeColor = System.Drawing.Color.White;
-            this.lblFile2.Location = new System.Drawing.Point(3, 0);
-            this.lblFile2.Name = "lblFile2";
-            this.lblFile2.Size = new System.Drawing.Size(25, 24);
-            this.lblFile2.TabIndex = 4;
-            this.lblFile2.Text = "...";
+            this.LblFile2.AutoSize = true;
+            this.LblFile2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblFile2.ForeColor = System.Drawing.Color.White;
+            this.LblFile2.Location = new System.Drawing.Point(3, 0);
+            this.LblFile2.Name = "LblFile2";
+            this.LblFile2.Size = new System.Drawing.Size(25, 24);
+            this.LblFile2.TabIndex = 4;
+            this.LblFile2.Text = "...";
             // 
             // splitContainer1
             // 
@@ -96,13 +96,13 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.treFile1);
-            this.splitContainer1.Panel1.Controls.Add(this.lblFile1);
+            this.splitContainer1.Panel1.Controls.Add(this.TreFile1);
+            this.splitContainer1.Panel1.Controls.Add(this.LblFile1);
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.treFile2);
-            this.splitContainer1.Panel2.Controls.Add(this.lblFile2);
+            this.splitContainer1.Panel2.Controls.Add(this.TreFile2);
+            this.splitContainer1.Panel2.Controls.Add(this.LblFile2);
             this.splitContainer1.Size = new System.Drawing.Size(960, 514);
             this.splitContainer1.SplitterDistance = 470;
             this.splitContainer1.TabIndex = 5;
@@ -130,10 +130,10 @@
 
         #endregion
 
-        private System.Windows.Forms.TreeView treFile1;
-        private System.Windows.Forms.TreeView treFile2;
-        private System.Windows.Forms.Label lblFile1;
-        private System.Windows.Forms.Label lblFile2;
+        private System.Windows.Forms.TreeView TreFile1;
+        private System.Windows.Forms.TreeView TreFile2;
+        private System.Windows.Forms.Label LblFile1;
+        private System.Windows.Forms.Label LblFile2;
         private System.Windows.Forms.SplitContainer splitContainer1;
     }
 }
