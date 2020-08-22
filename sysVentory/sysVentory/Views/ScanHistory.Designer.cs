@@ -46,7 +46,6 @@
             this.CmdNewScan.Text = "New Scan";
             this.CmdNewScan.UseVisualStyleBackColor = true;
             this.CmdNewScan.Click += new System.EventHandler(this.CmdNewScan_Click);
-            this.CmdNewScan.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CmdNewScan_MouseClick);
             // 
             // CmdCompare
             // 
