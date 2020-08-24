@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 using sysVentory.Model.Definitions;
 
 namespace sysVentory
@@ -8,6 +9,13 @@ namespace sysVentory
         public FilesCompare(IScan leftScan, IScan rightScan)
         {
             InitializeComponent();
+            TreFile1.Nodes.Clear();
+            TreFile2.Nodes.Clear();
+            LblFile1.Text = leftScan.ScanDate.ToString("dd-MM-yyyyy HH:mm");
+            if(rightScan != null)
+            {
+                LblFile2.Text = rightScan.ScanDate.ToString("dd-MM-yyyyy HH:mm");
+            }
         }
 
         // TreeView1.SelectedNode.BackColor = SystemColors.HighlightText; -> highlighting elements
