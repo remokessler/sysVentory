@@ -5,6 +5,7 @@ namespace sysVentory.Model.Definitions
 {
     public interface IComputerService
     {
+        IComputer AddComputer(string macAddress);
         IEnumerable<IComputer> GetComputers(Func<IComputer, bool> condition = null);
         IComputer GetComputer(Func<IComputer, bool> condition);
         bool DeleteComputer(string macAddress);

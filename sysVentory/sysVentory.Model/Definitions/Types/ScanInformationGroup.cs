@@ -10,5 +10,10 @@ namespace sysVentory.Model.Definitions.Types
 
         [JsonConverter(typeof(ScanInformationConverter))]
         public IEnumerable<IScanInformation> Properties { get; set; }
+
+        public override string ToString()
+        {
+            return Type;
+        }
     }
 }

@@ -10,6 +10,7 @@ namespace sysVentory.Views
 {
     public partial class ScanHistory : Form
     {
+        private IComputer _selectedComputer { get; set; }
 
         public ScanHistory()
         {
@@ -27,9 +28,15 @@ namespace sysVentory.Views
 
         private void CmdCompare_Click(object sender, EventArgs e)
         {
-            var scan = sender as IScan;
+            if (LstScans.SelectedItems?.Count != 2)
+            {
+                MessageBox.Show("Please select exactly 2 Scans. You can select multiple with holding CTRL.");
+                return;
+            }
+            var scanLeft = _selectedComputer.Scans.First(s => s.Id == LstScans.SelectedItems[0].Index);
+            var scanRight = _selectedComputer.Scans.First(s => s.Id == LstScans.SelectedItems[1].Index);
 
-            Form form = new FilesCompare(scan, scan);
+            Form form = new FilesCompare(scanLeft, scanRight);
             form.Owner = this;
             form.ShowInTaskbar = false;
             form.ShowDialog();
@@ -38,8 +45,8 @@ namespace sysVentory.Views
         private void SelectedComputerChanged(object sender, SelectedComputerChangedEventArgs sccea)
         {
             LstScans.Items.Clear();
-            var computer = sender as IComputer;
-            LstScans.Items.AddRange(computer.Scans.Select(s => new ListViewItem(s.ScanDate.ToString(), s.Id)).ToArray());
+            _selectedComputer = sender as IComputer;
+            LstScans.Items.AddRange(_selectedComputer.Scans.Select(s => new ListViewItem(s.ScanDate.ToString(), s.Id)).ToArray());
         }
     }
 }

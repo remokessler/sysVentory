@@ -15,8 +15,8 @@ namespace sysVentory.Controller
             IDataBaseService dataBaseService = null)
         {
             dataBaseService = dataBaseService ?? new DataBaseService();
-            _scanService = scanService ?? new ScanService(dataBaseService);
             _computerService = computerService ?? new ComputerService(dataBaseService);
+            _scanService = scanService ?? new ScanService(dataBaseService, _computerService);
         }
 
         public IScan NewScan(string macAddress)

@@ -18,16 +18,13 @@ namespace sysVentory.Model
             Directory.CreateDirectory(_basePath);
         }
 
-        public IComputer AddComputer(string macAddress)
+        public IComputer AddComputer(IComputer computer)
         {
-            var computer = new Computer
-            {
-                Name = Environment.MachineName,
-                MacAddress = macAddress
-            };
-            if (File.Exists(getPath(macAddress)))
-                throw new IOException("The file which should be created already existed under the path: " + getPath(macAddress));
-            File.WriteAllText(getPath(macAddress), JsonConvert.SerializeObject(computer));
+            if (computer.MacAddress == null)
+                throw new ArgumentException();
+            if (File.Exists(getPath(computer.MacAddress)))
+                throw new IOException("The file which should be created already existed under the path: " + getPath(computer.MacAddress));
+            File.WriteAllText(getPath(computer.MacAddress), JsonConvert.SerializeObject(computer));
             return computer;
         }
 
@@ -35,7 +32,7 @@ namespace sysVentory.Model
         {
             if (!File.Exists(getPath(macAddress)))
             {
-                AddComputer(macAddress);
+                throw new ArgumentException("MAC Adress: " + macAddress + "is not yet saved!");
             }
             var computer = JsonConvert.DeserializeObject<Computer>(File.ReadAllText(getPath(macAddress)));
             scan.Id = computer.Scans?.Max(s => s.Id) + 1 ?? 0;
@@ -48,9 +45,16 @@ namespace sysVentory.Model
 
         public IEnumerable<IComputer> GetComputers(Func<IComputer, bool> condition = null)
         {
-            return Directory.GetFiles(_basePath)
+            try
+            {
+                return Directory.GetFiles(_basePath)
                 .Select(n => JsonConvert.DeserializeObject<Computer>(File.ReadAllText(Path.Combine(_basePath, n))))
                 .Where(s => condition == null ? true : condition(s));
+            }
+            catch (IOException)
+            {
+                return null;
+            }
         }
 
         public bool DeleteComputer(string macAddress)

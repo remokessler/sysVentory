@@ -26,7 +26,12 @@ namespace sysVentory.Model
 
         public IComputer AddComputer(string macAddress)
         {
-            return _dataBaseService.AddComputer(macAddress);
+            var computer = new Computer
+            {
+                Name = Environment.MachineName,
+                MacAddress = macAddress
+            };
+            return _dataBaseService.AddComputer(computer);
         }
 
         public bool DeleteComputer(string macAddress)

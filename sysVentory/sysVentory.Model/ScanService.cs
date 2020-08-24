@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using sysVentory.Model.Definitions;
 using sysVentory.Model.Definitions.Types;
 using sysVentory.Model.ScanServiceHelpers;
@@ -12,9 +11,11 @@ namespace sysVentory.Model
     {
 
         private IDataBaseService _dataBaseService { get; set; }
-        public ScanService(IDataBaseService dataBaseService)
+        private IComputerService _computerService { get; set; }
+        public ScanService(IDataBaseService dataBaseService, IComputerService computerService)
         {
             _dataBaseService = dataBaseService;
+            _computerService = computerService;
         }
 
         public IScan NewScan(string macAddress)
@@ -36,6 +37,10 @@ namespace sysVentory.Model
             }
             scan.ScanInformationGroup = groups;
             scan.ScanDate = DateTime.Now;
+            if(_computerService.GetComputer(computer => computer.MacAddress == macAddress) == null)
+            {
+                _computerService.AddComputer(macAddress);
+            }
             _dataBaseService.AddScan(scan, macAddress);
             return scan;
         }
