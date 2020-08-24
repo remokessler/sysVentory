@@ -9,8 +9,6 @@ namespace sysVentory
         public FilesCompare(IScan leftScan, IScan rightScan)
         {
             InitializeComponent();
-            LblFile1.Text = "...";
-            LblFile2.Text = "...";
             TreFile1.Nodes.Clear();
             TreFile2.Nodes.Clear();
             LblFile1.Text = leftScan.ScanDate.ToString("dd-MM-yyyyy HH:mm");
