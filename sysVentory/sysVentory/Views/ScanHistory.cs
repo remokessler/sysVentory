@@ -23,7 +23,11 @@ namespace sysVentory.Views
             MessageBox.Show("Scan successfully done", "Done");
 
             EventHelper.Instance.EmitNewScan(sender, new NewScanEventArgs());
-            LstScans.Items.Add(new ListViewItem(scan.ScanDate.ToString(), scan.Id));
+
+            if (_selectedComputer.MacAddress == MacAddressHelper.Instance.Current)
+            {
+                LstScans.Items.Add(new ListViewItem(scan.ScanDate.ToString(), scan.Id));
+            }
         }
 
         private void CmdCompare_Click(object sender, EventArgs e)
