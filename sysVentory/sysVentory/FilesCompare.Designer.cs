@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FilesCompare));
-            this.TreFile1 = new System.Windows.Forms.TreeView();
-            this.TreFile2 = new System.Windows.Forms.TreeView();
+            this.TreLeft = new System.Windows.Forms.TreeView();
+            this.TreRight = new System.Windows.Forms.TreeView();
             this.LblFile1 = new System.Windows.Forms.Label();
             this.LblFile2 = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
@@ -42,27 +42,27 @@
             // 
             // TreFile1
             // 
-            this.TreFile1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.TreLeft.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.TreFile1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
-            this.TreFile1.Font = new System.Drawing.Font("Leelawadee", 9.75F);
-            this.TreFile1.Location = new System.Drawing.Point(0, 26);
-            this.TreFile1.Name = "TreFile1";
-            this.TreFile1.Size = new System.Drawing.Size(467, 488);
-            this.TreFile1.TabIndex = 0;
+            this.TreLeft.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
+            this.TreLeft.Font = new System.Drawing.Font("Leelawadee", 9.75F);
+            this.TreLeft.Location = new System.Drawing.Point(0, 26);
+            this.TreLeft.Name = "TreFile1";
+            this.TreLeft.Size = new System.Drawing.Size(467, 488);
+            this.TreLeft.TabIndex = 0;
             // 
             // TreFile2
             // 
-            this.TreFile2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.TreRight.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.TreFile2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
-            this.TreFile2.Font = new System.Drawing.Font("Leelawadee", 9.75F);
-            this.TreFile2.Location = new System.Drawing.Point(3, 26);
-            this.TreFile2.Name = "TreFile2";
-            this.TreFile2.Size = new System.Drawing.Size(483, 488);
-            this.TreFile2.TabIndex = 1;
+            this.TreRight.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
+            this.TreRight.Font = new System.Drawing.Font("Leelawadee", 9.75F);
+            this.TreRight.Location = new System.Drawing.Point(3, 26);
+            this.TreRight.Name = "TreFile2";
+            this.TreRight.Size = new System.Drawing.Size(483, 488);
+            this.TreRight.TabIndex = 1;
             // 
             // LblFile1
             // 
@@ -96,12 +96,12 @@
             // 
             // splitContainer1.Panel1
             // 
-            this.splitContainer1.Panel1.Controls.Add(this.TreFile1);
+            this.splitContainer1.Panel1.Controls.Add(this.TreLeft);
             this.splitContainer1.Panel1.Controls.Add(this.LblFile1);
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.TreFile2);
+            this.splitContainer1.Panel2.Controls.Add(this.TreRight);
             this.splitContainer1.Panel2.Controls.Add(this.LblFile2);
             this.splitContainer1.Size = new System.Drawing.Size(960, 514);
             this.splitContainer1.SplitterDistance = 470;
@@ -130,8 +130,8 @@
 
         #endregion
 
-        private System.Windows.Forms.TreeView TreFile1;
-        private System.Windows.Forms.TreeView TreFile2;
+        private System.Windows.Forms.TreeView TreLeft;
+        private System.Windows.Forms.TreeView TreRight;
         private System.Windows.Forms.Label LblFile1;
         private System.Windows.Forms.Label LblFile2;
         private System.Windows.Forms.SplitContainer splitContainer1;
