@@ -56,6 +56,7 @@ namespace sysVentory.Model.ScanServiceHelpers
             using (var key = Registry.LocalMachine.OpenSubKey(registry_key))
             {
                 if (key == null) return;
+                var properties = new List<ItemProperty>();
                 foreach (var subkey_name in key.GetSubKeyNames())
                 {
                     using (var subkey = key.OpenSubKey(subkey_name))
@@ -64,10 +65,11 @@ namespace sysVentory.Model.ScanServiceHelpers
                         {
                             var disp = subkey.GetValue("DisplayName") as string;
                             if (!string.IsNullOrEmpty(disp))
-                                Add(new Item("Software", new List<ItemProperty> { new ItemProperty("Name", disp) }));
+                                properties.Add(new ItemProperty(disp, null));
                         }
                     }
                 }
+                Add(new Item("Software", properties));
             }
         }
     }
