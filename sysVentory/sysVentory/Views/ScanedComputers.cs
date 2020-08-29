@@ -3,7 +3,6 @@ using System.Linq;
 using System.Windows.Forms;
 using sysVentory.Events;
 using sysVentory.Helper;
-using sysVentory.Model.Definitions;
 
 namespace sysVentory.Views
 {

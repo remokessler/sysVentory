@@ -35,7 +35,12 @@ namespace sysVentory.Model
                 throw new ArgumentException("MAC Adress: " + macAddress + "is not yet saved!");
             }
             var computer = JsonConvert.DeserializeObject<Computer>(File.ReadAllText(getPath(macAddress)));
-            scan.Id = computer.Scans?.Max(s => s.Id) + 1 ?? 0;
+
+            if (computer.Scans?.Count() == 0)
+                scan.Id = 0;
+            else
+                scan.Id = computer.Scans?.Max(s => s.Id) + 1 ?? 0;
+
             var scans = computer.Scans?.ToList() ?? new List<IScan>();
             scans.Add(scan);
             computer.Scans = scans;
@@ -64,7 +69,26 @@ namespace sysVentory.Model
 
             try
             {
-                File.Delete(_basePath + macAddress + file_ending);
+                File.Delete(getPath(macAddress));
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+        public bool DeleteScan(string macAddress, int scanId)
+        {
+            if (string.IsNullOrWhiteSpace(macAddress) || scanId < 0)
+                return false;
+
+            try
+            {
+                var computer = JsonConvert.DeserializeObject<Computer>(File.ReadAllText(getPath(macAddress)));
+                var scans = computer.Scans.ToList();
+                scans.Remove(computer.Scans.First(s => s.Id == scanId));
+                computer.Scans = scans;
+                File.WriteAllText(getPath(computer.MacAddress), JsonConvert.SerializeObject(computer));
                 return true;
             }
             catch (Exception)

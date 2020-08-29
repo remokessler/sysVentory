@@ -9,5 +9,6 @@ namespace sysVentory.Model.Definitions
         IComputer AddScan(IScan scan, string macAddress);
         IEnumerable<IComputer> GetComputers(Func<IComputer, bool> condition = null);
         bool DeleteComputer(string macAddress);
+        bool DeleteScan(string macAddress, int scanId);
     }
 }

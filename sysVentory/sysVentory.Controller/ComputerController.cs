@@ -37,5 +37,10 @@ namespace sysVentory.Controller
         {
             return _computerService.DeleteComputer(macAddress);
         }
+
+        public bool DeleteScan(string macAddress, int scanId)
+        {
+            return _scanService.DeleteScan(macAddress, scanId);
+        }
     }
 }

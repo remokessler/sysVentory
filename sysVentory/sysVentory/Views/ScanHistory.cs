@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Linq;
 using System.Windows.Forms;
-using System.Windows.Forms.VisualStyles;
 using sysVentory.Events;
 using sysVentory.Helper;
 using sysVentory.Model.Definitions;
@@ -18,12 +17,13 @@ namespace sysVentory.Views
             EventHelper.Instance.OnSelectedComputerChanged += SelectedComputerChanged;
         }
 
-        public void CmdNewScan_Click(object sender, EventArgs e)
+        private void CmdNewScan_Click(object sender, EventArgs e)
         {
-            ControllerHelper.Instance.ComputerController.NewScan(MacAddressHelper.Instance.Current);
+            var scan = ControllerHelper.Instance.ComputerController.NewScan(MacAddressHelper.Instance.Current);
             MessageBox.Show("Scan successfully done", "Done");
 
             EventHelper.Instance.EmitNewScan(sender, new NewScanEventArgs());
+            LstScans.Items.Add(new ListViewItem(scan.ScanDate.ToString(), scan.Id));
         }
 
         private void CmdCompare_Click(object sender, EventArgs e)
@@ -40,6 +40,17 @@ namespace sysVentory.Views
             form.Owner = this;
             form.ShowInTaskbar = false;
             form.ShowDialog();
+        }
+
+        private void CmdDelete_Click(object sender, EventArgs e)
+        {
+            foreach (ListViewItem lvi in LstScans.SelectedItems)
+            {
+                if (ControllerHelper.Instance.ComputerController.DeleteScan(MacAddressHelper.Instance.Current, lvi.ImageIndex))
+                {
+                    LstScans.Items.Remove(lvi);
+                }
+            }
         }
 
         private void SelectedComputerChanged(object sender, SelectedComputerChangedEventArgs sccea)

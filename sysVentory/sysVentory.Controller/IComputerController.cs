@@ -10,5 +10,6 @@ namespace sysVentory.Controller
         IComputer GetComputer(Func<IComputer, bool> condition);
         IEnumerable<IComputer> GetComputers(Func<IComputer, bool> condition = null);
         bool DeleteComputer(string macAddress);
+        bool DeleteScan(string macAddress, int scanId);
     }
 }

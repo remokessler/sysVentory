@@ -44,5 +44,10 @@ namespace sysVentory.Model
             _dataBaseService.AddScan(scan, macAddress);
             return scan;
         }
+
+        public bool DeleteScan(string macAddresse, int scanId)
+        {
+            return _dataBaseService.DeleteScan(macAddresse, scanId);
+        }
     }
 }
