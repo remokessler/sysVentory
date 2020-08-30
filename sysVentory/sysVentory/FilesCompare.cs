@@ -34,6 +34,7 @@ namespace sysVentory
                 tv.Nodes.Add(treeNode);
             }
         }
+
         public void BuildCompareTree(TreeView tv, IScan source, IScan compare)
         {
             var groupsOfSameType = 0;
