@@ -24,7 +24,7 @@ namespace sysVentory.Views
 
             EventHelper.Instance.EmitNewScan(sender, new NewScanEventArgs());
 
-            if (_selectedComputer.MacAddress == MacAddressHelper.Instance.Current)
+            if (_selectedComputer != null && _selectedComputer.MacAddress == MacAddressHelper.Instance.Current)
             {
                 LstScans.Items.Add(new ListViewItem(scan.ScanDate.ToString(), scan.Id));
             }
