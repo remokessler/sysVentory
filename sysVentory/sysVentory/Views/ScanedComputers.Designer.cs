@@ -53,16 +53,17 @@
             this.LstComputers.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.LstComputers.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.LstComputers.ForeColor = System.Drawing.SystemColors.Window;
+            this.LstComputers.FullRowSelect = true;
             this.LstComputers.HideSelection = false;
-            this.LstComputers.Location = new System.Drawing.Point(15, 60);
-            this.LstComputers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LstComputers.Location = new System.Drawing.Point(15, 55);
+            this.LstComputers.Margin = new System.Windows.Forms.Padding(2);
             this.LstComputers.MultiSelect = false;
             this.LstComputers.Name = "LstComputers";
             this.LstComputers.Size = new System.Drawing.Size(200, 440);
             this.LstComputers.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.LstComputers.TabIndex = 2;
             this.LstComputers.UseCompatibleStateImageBehavior = false;
-            this.LstComputers.View = System.Windows.Forms.View.List;
+            this.LstComputers.View = System.Windows.Forms.View.Tile;
             this.LstComputers.SelectedIndexChanged += new System.EventHandler(this.LstComputers_SelectedComputerChanged);
             // 
             // ScanedComputers
@@ -75,7 +76,7 @@
             this.Controls.Add(this.LstComputers);
             this.Controls.Add(this.LblComputernames);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ScanedComputers";
             this.Text = "ScanOverview";
             this.ResumeLayout(false);

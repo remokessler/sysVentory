@@ -15,6 +15,7 @@ namespace sysVentory.Views
         {
             InitializeComponent();
             EventHelper.Instance.OnSelectedComputerChanged += SelectedComputerChanged;
+            LstScans.FullRowSelect = true;
         }
 
         private void CmdNewScan_Click(object sender, EventArgs e)
@@ -37,8 +38,8 @@ namespace sysVentory.Views
                 MessageBox.Show("Please select exactly 2 Scans. You can select multiple with holding CTRL.");
                 return;
             }
-            var scanLeft = _selectedComputer.Scans.First(s => s.Id == LstScans.SelectedItems[0].Index);
-            var scanRight = _selectedComputer.Scans.First(s => s.Id == LstScans.SelectedItems[1].Index);
+            var scanLeft = _selectedComputer.Scans.First(s => s.Id == LstScans.SelectedItems[0].ImageIndex);
+            var scanRight = _selectedComputer.Scans.First(s => s.Id == LstScans.SelectedItems[1].ImageIndex);
 
             Form form = new FilesCompare(scanLeft, scanRight);
             form.Owner = this;
