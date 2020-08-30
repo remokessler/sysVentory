@@ -37,12 +37,11 @@
             // CmdNewScan
             // 
             this.CmdNewScan.Depth = 0;
-            this.CmdNewScan.Location = new System.Drawing.Point(20, 18);
-            this.CmdNewScan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CmdNewScan.Location = new System.Drawing.Point(15, 15);
             this.CmdNewScan.MouseState = MaterialSkin.MouseState.HOVER;
             this.CmdNewScan.Name = "CmdNewScan";
             this.CmdNewScan.Primary = true;
-            this.CmdNewScan.Size = new System.Drawing.Size(120, 37);
+            this.CmdNewScan.Size = new System.Drawing.Size(90, 30);
             this.CmdNewScan.TabIndex = 1;
             this.CmdNewScan.Text = "New Scan";
             this.CmdNewScan.UseVisualStyleBackColor = true;
@@ -51,12 +50,11 @@
             // CmdCompare
             // 
             this.CmdCompare.Depth = 0;
-            this.CmdCompare.Location = new System.Drawing.Point(180, 18);
-            this.CmdCompare.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CmdCompare.Location = new System.Drawing.Point(135, 15);
             this.CmdCompare.MouseState = MaterialSkin.MouseState.HOVER;
             this.CmdCompare.Name = "CmdCompare";
             this.CmdCompare.Primary = true;
-            this.CmdCompare.Size = new System.Drawing.Size(120, 37);
+            this.CmdCompare.Size = new System.Drawing.Size(90, 30);
             this.CmdCompare.TabIndex = 2;
             this.CmdCompare.Text = "Compare";
             this.CmdCompare.UseVisualStyleBackColor = true;
@@ -65,12 +63,11 @@
             // CmdDelete
             // 
             this.CmdDelete.Depth = 0;
-            this.CmdDelete.Location = new System.Drawing.Point(340, 18);
-            this.CmdDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CmdDelete.Location = new System.Drawing.Point(255, 15);
             this.CmdDelete.MouseState = MaterialSkin.MouseState.HOVER;
             this.CmdDelete.Name = "CmdDelete";
             this.CmdDelete.Primary = true;
-            this.CmdDelete.Size = new System.Drawing.Size(120, 37);
+            this.CmdDelete.Size = new System.Drawing.Size(90, 30);
             this.CmdDelete.TabIndex = 3;
             this.CmdDelete.Text = "Delete";
             this.CmdDelete.UseVisualStyleBackColor = true;
@@ -84,26 +81,25 @@
             this.LstScans.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
             this.LstScans.ForeColor = System.Drawing.SystemColors.Window;
             this.LstScans.HideSelection = false;
-            this.LstScans.Location = new System.Drawing.Point(20, 74);
-            this.LstScans.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.LstScans.Location = new System.Drawing.Point(15, 60);
+            this.LstScans.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.LstScans.Name = "LstScans";
-            this.LstScans.Size = new System.Drawing.Size(965, 454);
+            this.LstScans.Size = new System.Drawing.Size(725, 370);
             this.LstScans.TabIndex = 4;
             this.LstScans.UseCompatibleStateImageBehavior = false;
             this.LstScans.View = System.Windows.Forms.View.List;
             // 
             // ScanHistory
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(61)))), ((int)(((byte)(61)))));
-            this.ClientSize = new System.Drawing.Size(1000, 554);
+            this.ClientSize = new System.Drawing.Size(750, 450);
             this.Controls.Add(this.LstScans);
             this.Controls.Add(this.CmdDelete);
             this.Controls.Add(this.CmdCompare);
             this.Controls.Add(this.CmdNewScan);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "ScanHistory";
             this.Text = "ScanHistory";
             this.ResumeLayout(false);

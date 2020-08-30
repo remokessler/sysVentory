@@ -36,8 +36,8 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.PnlGreen = new System.Windows.Forms.Panel();
             this.LblGreen = new System.Windows.Forms.Label();
-            this.LblYellow = new System.Windows.Forms.Label();
-            this.PnlYellow = new System.Windows.Forms.Panel();
+            this.LblOrange = new System.Windows.Forms.Label();
+            this.PnlOrange = new System.Windows.Forms.Panel();
             this.LblRed = new System.Windows.Forms.Label();
             this.PnlRed = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -133,25 +133,25 @@
             this.LblGreen.TabIndex = 7;
             this.LblGreen.Text = "Green: Added Item";
             // 
-            // LblYellow
+            // LblOrange
             // 
-            this.LblYellow.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.LblYellow.AutoSize = true;
-            this.LblYellow.ForeColor = System.Drawing.SystemColors.Window;
-            this.LblYellow.Location = new System.Drawing.Point(442, 519);
-            this.LblYellow.Name = "LblYellow";
-            this.LblYellow.Size = new System.Drawing.Size(110, 13);
-            this.LblYellow.TabIndex = 9;
-            this.LblYellow.Text = "Yellow: Changed Item";
+            this.LblOrange.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.LblOrange.AutoSize = true;
+            this.LblOrange.ForeColor = System.Drawing.SystemColors.Window;
+            this.LblOrange.Location = new System.Drawing.Point(442, 519);
+            this.LblOrange.Name = "LblOrange";
+            this.LblOrange.Size = new System.Drawing.Size(114, 13);
+            this.LblOrange.TabIndex = 9;
+            this.LblOrange.Text = "Orange: Changed Item";
             // 
-            // PnlYellow
+            // PnlOrange
             // 
-            this.PnlYellow.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.PnlYellow.BackColor = System.Drawing.Color.Yellow;
-            this.PnlYellow.Location = new System.Drawing.Point(421, 517);
-            this.PnlYellow.Name = "PnlYellow";
-            this.PnlYellow.Size = new System.Drawing.Size(15, 15);
-            this.PnlYellow.TabIndex = 8;
+            this.PnlOrange.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.PnlOrange.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.PnlOrange.Location = new System.Drawing.Point(421, 517);
+            this.PnlOrange.Name = "PnlOrange";
+            this.PnlOrange.Size = new System.Drawing.Size(15, 15);
+            this.PnlOrange.TabIndex = 8;
             // 
             // LblRed
             // 
@@ -181,8 +181,8 @@
             this.ClientSize = new System.Drawing.Size(984, 561);
             this.Controls.Add(this.LblRed);
             this.Controls.Add(this.PnlRed);
-            this.Controls.Add(this.LblYellow);
-            this.Controls.Add(this.PnlYellow);
+            this.Controls.Add(this.LblOrange);
+            this.Controls.Add(this.PnlOrange);
             this.Controls.Add(this.LblGreen);
             this.Controls.Add(this.PnlGreen);
             this.Controls.Add(this.splitContainer1);
@@ -210,8 +210,8 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Panel PnlGreen;
         private System.Windows.Forms.Label LblGreen;
-        private System.Windows.Forms.Label LblYellow;
-        private System.Windows.Forms.Panel PnlYellow;
+        private System.Windows.Forms.Label LblOrange;
+        private System.Windows.Forms.Panel PnlOrange;
         private System.Windows.Forms.Label LblRed;
         private System.Windows.Forms.Panel PnlRed;
     }
