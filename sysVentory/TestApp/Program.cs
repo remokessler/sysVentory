@@ -14,6 +14,7 @@ namespace TestApp
             Console.WriteLine(computerController.GetComputers());
             Console.ReadLine();
         }
+
         private static string _currentMacAddress => NetworkInterface.GetAllNetworkInterfaces()
                 .Where(nic => nic.OperationalStatus == OperationalStatus.Up && nic.NetworkInterfaceType != NetworkInterfaceType.Loopback)
                 .Select(nic => nic.GetPhysicalAddress().ToString())

@@ -1,6 +1,6 @@
 ﻿namespace sysVentory
 {
-    partial class ScanDetails
+    partial class ScanDetailsView
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ScanDetails));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ScanDetailsView));
             this.TreScan = new System.Windows.Forms.TreeView();
-            this.LblScan = new System.Windows.Forms.Label();
+            this.LblScanTitle = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // TreScan
@@ -47,14 +47,14 @@
             // 
             // LblScan
             // 
-            this.LblScan.AutoSize = true;
-            this.LblScan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblScan.ForeColor = System.Drawing.Color.White;
-            this.LblScan.Location = new System.Drawing.Point(8, 35);
-            this.LblScan.Name = "LblScan";
-            this.LblScan.Size = new System.Drawing.Size(25, 24);
-            this.LblScan.TabIndex = 5;
-            this.LblScan.Text = "...";
+            this.LblScanTitle.AutoSize = true;
+            this.LblScanTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblScanTitle.ForeColor = System.Drawing.Color.White;
+            this.LblScanTitle.Location = new System.Drawing.Point(8, 35);
+            this.LblScanTitle.Name = "LblScan";
+            this.LblScanTitle.Size = new System.Drawing.Size(25, 24);
+            this.LblScanTitle.TabIndex = 5;
+            this.LblScanTitle.Text = "...";
             // 
             // ScanDetails
             // 
@@ -63,7 +63,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.ClientSize = new System.Drawing.Size(800, 575);
             this.Controls.Add(this.TreScan);
-            this.Controls.Add(this.LblScan);
+            this.Controls.Add(this.LblScanTitle);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ScanDetails";
             this.Text = "Scan Details";
@@ -76,6 +76,6 @@
         #endregion
 
         private System.Windows.Forms.TreeView TreScan;
-        private System.Windows.Forms.Label LblScan;
+        private System.Windows.Forms.Label LblScanTitle;
     }
 }

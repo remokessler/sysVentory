@@ -16,7 +16,7 @@ namespace sysVentory.Helper
 
         }
 
-        public void EmitSelectedComputerChanged(IComputer sender, SelectedComputerChangedEventArgs sccea)
+        public void EmitSelectedComputerChanged(object sender, SelectedComputerChangedEventArgs sccea)
         {
             OnSelectedComputerChanged(sender, sccea);
         }

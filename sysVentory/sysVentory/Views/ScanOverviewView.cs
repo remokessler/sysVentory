@@ -1,19 +1,26 @@
 ﻿using System;
 using System.Linq;
 using System.Windows.Forms;
+using sysVentory.Controller;
 using sysVentory.Events;
 using sysVentory.Helper;
 using sysVentory.Model.Definitions;
 
 namespace sysVentory.Views
 {
-    public partial class ScanHistory : Form
+    internal partial class ScanOverviewView : Form
     {
         private IComputer _selectedComputer { get; set; }
+        private IComputerController _computerController { get; set; }
+        private IClientConfig _clientConifg { get; set; }
 
-        public ScanHistory()
+        public ScanOverviewView(IComputerController computerController = null, IClientConfig clientConfig = null)
         {
             InitializeComponent();
+
+            _computerController = computerController ?? new ComputerController();
+            _clientConifg = clientConfig ?? new ClientConfig();
+
             EventHelper.Instance.OnSelectedComputerChanged += SelectedComputerChanged;
             EventHelper.Instance.OnNewScan += NewScan;
         }
@@ -21,7 +28,7 @@ namespace sysVentory.Views
         private void NewScan(object sender, NewScanEventArgs e)
         {
             var scan = e.NewScan;
-            if (_selectedComputer != null && _selectedComputer.MacAddress == MacAddressHelper.Instance.Current)
+            if (_selectedComputer != null && _selectedComputer.MacAddress == _clientConifg.MacAddress)
             {
                 LstScans.Items.Add(new ListViewItem(scan.ScanDate.ToString(), scan.Id));
             }
@@ -37,17 +44,17 @@ namespace sysVentory.Views
             var scanLeft = _selectedComputer.Scans.First(s => s.Id == LstScans.SelectedItems[0].ImageIndex);
             var scanRight = _selectedComputer.Scans.First(s => s.Id == LstScans.SelectedItems[1].ImageIndex);
 
-            var form = new FilesCompare(scanLeft, scanRight);
-            form.Owner = this;
-            form.ShowInTaskbar = false;
-            form.ShowDialog();
+            var scanCompareView = new ScanCompareView(scanLeft, scanRight, _selectedComputer.Name, _selectedComputer.Name);
+            scanCompareView.Owner = this;
+            scanCompareView.ShowInTaskbar = false;
+            scanCompareView.ShowDialog();
         }
 
         private void CmdDelete_Click(object sender, EventArgs e)
         {
             foreach (ListViewItem lvi in LstScans.SelectedItems)
             {
-                if (ControllerHelper.Instance.ComputerController.DeleteScan(MacAddressHelper.Instance.Current, lvi.ImageIndex))
+                if (_computerController.DeleteScan(_clientConifg.MacAddress, lvi.ImageIndex))
                 {
                     LstScans.Items.Remove(lvi);
                 }
@@ -57,7 +64,8 @@ namespace sysVentory.Views
         private void SelectedComputerChanged(object sender, SelectedComputerChangedEventArgs sccea)
         {
             LstScans.Items.Clear();
-            _selectedComputer = sender as IComputer;
+            _selectedComputer = sccea.NewSelectedComputer;
+            LblActiveComputer.Text = _selectedComputer.Name ?? string.Empty;
             if (_selectedComputer != null)
             {
                 LstScans.Items.AddRange(_selectedComputer.Scans.Select(s => new ListViewItem(s.ScanDate.ToString(), s.Id)).ToArray());
@@ -73,10 +81,10 @@ namespace sysVentory.Views
             }
             var scanLeft = _selectedComputer.Scans.First(s => s.Id == LstScans.SelectedItems[0].ImageIndex);
 
-            var form = new ScanDetails(scanLeft);
-            form.Owner = this;
-            form.ShowInTaskbar = false;
-            form.ShowDialog();
+            var scanDetails = new ScanDetailsView(scanLeft, _selectedComputer.Name);
+            scanDetails.Owner = this;
+            scanDetails.ShowInTaskbar = false;
+            scanDetails.ShowDialog();
         }
     }
 }

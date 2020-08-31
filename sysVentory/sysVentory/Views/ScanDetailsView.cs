@@ -1,27 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
+﻿using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using sysVentory.Model.Definitions;
 
 namespace sysVentory
 {
-    public partial class ScanDetails : Form
+    public partial class ScanDetailsView : Form
     {
-        public ScanDetails(IScan scan)
+        public ScanDetailsView(IScan scan, string computerName)
         {
             InitializeComponent();
             TreScan.Nodes.Clear();
-            LblScan.Text = scan.Id.ToString() + ": " + scan.ScanDate.ToString("dd-MM-yyyy HH:mm");
-            BuildSourceTree(TreScan, scan);
+            LblScanTitle.Text = $"Computer: {computerName ?? string.Empty} | Scan: {scan.Id.ToString()} from {scan.ScanDate.ToString("dd-MM-yyyy HH:mm")}";
+            BuildTree(TreScan, scan);
         }
 
-        public void BuildSourceTree(TreeView tv, IScan scan)
+        public void BuildTree(TreeView tv, IScan scan)
         {
             foreach (IScanInformationGroup sig in scan.ScanInformationGroup.OrderBy(g => g.Type))
             {
-                var treeNode = CreateGroupNode(sig);
+                var treeNode = new TreeNode(sig.ToString());
+                treeNode.ForeColor = Color.White;
+                treeNode.Expand();
                 foreach (IScanInformation si in sig.Properties)
                 {
                     var childNode = new TreeNode(si.ToString());
@@ -30,14 +30,6 @@ namespace sysVentory
                 }
                 tv.Nodes.Add(treeNode);
             }
-        }
-
-        private TreeNode CreateGroupNode(IScanInformationGroup sig)
-        {
-            var treeNode = new TreeNode(sig.ToString());
-            treeNode.ForeColor = Color.White;
-            treeNode.Expand();
-            return treeNode;
         }
     }
 }

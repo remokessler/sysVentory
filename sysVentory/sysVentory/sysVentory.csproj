@@ -51,40 +51,40 @@
   <ItemGroup>
     <Compile Include="Events\NewScanEventArgs.cs" />
     <Compile Include="Events\SelectedComputerChangedEventArgs.cs" />
-    <Compile Include="FilesCompare.cs">
+    <Compile Include="Config\IClientConfig.cs" />
+    <Compile Include="Views\ScanCompareView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FilesCompare.Designer.cs">
-      <DependentUpon>FilesCompare.cs</DependentUpon>
+    <Compile Include="Views\ScanCompareView.Designer.cs">
+      <DependentUpon>ScanCompareView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Helper\ControllerHelper.cs" />
-    <Compile Include="Helper\EventHelper.cs" />
+    <Compile Include="Events\EventHelper.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Helper\MacAddressHelper.cs" />
+    <Compile Include="Config\ClientConfig.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ScanDetails.cs">
+    <Compile Include="Views\ScanDetailsView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ScanDetails.Designer.cs">
-      <DependentUpon>ScanDetails.cs</DependentUpon>
+    <Compile Include="Views\ScanDetailsView.Designer.cs">
+      <DependentUpon>ScanDetailsView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\ScanedComputers.cs">
+    <Compile Include="Views\ComputerOverviewView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\ScanedComputers.Designer.cs">
-      <DependentUpon>ScanedComputers.cs</DependentUpon>
+    <Compile Include="Views\ComputerOverviewView.Designer.cs">
+      <DependentUpon>ComputerOverviewView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\ScanHistory.cs">
+    <Compile Include="Views\ScanOverviewView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Views\ScanHistory.Designer.cs">
-      <DependentUpon>ScanHistory.cs</DependentUpon>
+    <Compile Include="Views\ScanOverviewView.Designer.cs">
+      <DependentUpon>ScanOverviewView.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
@@ -98,17 +98,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="FilesCompare.resx">
-      <DependentUpon>FilesCompare.cs</DependentUpon>
+    <EmbeddedResource Include="Views\ScanCompareView.resx">
+      <DependentUpon>ScanCompareView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ScanDetails.resx">
-      <DependentUpon>ScanDetails.cs</DependentUpon>
+    <EmbeddedResource Include="Views\ScanDetailsView.resx">
+      <DependentUpon>ScanDetailsView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\ScanedComputers.resx">
-      <DependentUpon>ScanedComputers.cs</DependentUpon>
+    <EmbeddedResource Include="Views\ComputerOverviewView.resx">
+      <DependentUpon>ComputerOverviewView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\ScanHistory.resx">
-      <DependentUpon>ScanHistory.cs</DependentUpon>
+    <EmbeddedResource Include="Views\ScanOverviewView.resx">
+      <DependentUpon>ScanOverviewView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

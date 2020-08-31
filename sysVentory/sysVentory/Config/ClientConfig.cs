@@ -1,17 +1,16 @@
 ﻿using System.Linq;
 using System.Net.NetworkInformation;
+using sysVentory.Helper;
 
 namespace sysVentory
 {
-    internal class MacAddressHelper
+    internal class ClientConfig : IClientConfig
     {
-        public static MacAddressHelper Instance => _instance = _instance ?? new MacAddressHelper();
-        public string Current { get; private set; }
-        private static MacAddressHelper _instance { get; set; }
+        public string MacAddress { get; private set; }
 
-        private MacAddressHelper()
+        public ClientConfig()
         {
-            Current = NetworkInterface.GetAllNetworkInterfaces()
+            MacAddress = NetworkInterface.GetAllNetworkInterfaces()
                 .Where(nic => nic.OperationalStatus == OperationalStatus.Up && nic.NetworkInterfaceType != NetworkInterfaceType.Loopback)
                 .Select(nic => nic.GetPhysicalAddress().ToString())
                 .FirstOrDefault();

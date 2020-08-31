@@ -11,8 +11,8 @@ namespace sysVentory
         {
             InitializeComponent();
             pnlScanedComputers.Dock = DockStyle.Top | DockStyle.Left | DockStyle.Bottom;
-            LoadComputers(new ScanedComputers());
-            LoadHistory(new ScanHistory());
+            LoadComputers(new ComputerOverviewView());
+            LoadHistory(new ScanOverviewView());
         }
 
         private void LoadComputers(Form form)

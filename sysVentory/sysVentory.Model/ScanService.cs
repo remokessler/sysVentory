@@ -23,7 +23,7 @@ namespace sysVentory.Model
             var data = Data.Read();
             var scan = new Scan();
             if (data == null || data.Count() <= 0)
-                throw new ArgumentException("Data was not found!");
+                throw null;
 
             var groups = new List<IScanInformationGroup>();
             foreach (var item in data)

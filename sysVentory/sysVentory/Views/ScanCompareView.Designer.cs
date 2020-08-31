@@ -1,6 +1,6 @@
 ﻿namespace sysVentory
 {
-    partial class FilesCompare
+    partial class ScanCompareView
     {
         /// <summary>
         /// Required designer variable.
@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FilesCompare));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ScanCompareView));
             this.TreLeft = new System.Windows.Forms.TreeView();
             this.TreRight = new System.Windows.Forms.TreeView();
-            this.LblFile1 = new System.Windows.Forms.Label();
-            this.LblFile2 = new System.Windows.Forms.Label();
+            this.LblScanTitleLeft = new System.Windows.Forms.Label();
+            this.LblScanTitleRight = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.PnlGreen = new System.Windows.Forms.Panel();
             this.LblGreen = new System.Windows.Forms.Label();
@@ -72,25 +72,25 @@
             // 
             // LblFile1
             // 
-            this.LblFile1.AutoSize = true;
-            this.LblFile1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblFile1.ForeColor = System.Drawing.Color.White;
-            this.LblFile1.Location = new System.Drawing.Point(3, 0);
-            this.LblFile1.Name = "LblFile1";
-            this.LblFile1.Size = new System.Drawing.Size(25, 24);
-            this.LblFile1.TabIndex = 3;
-            this.LblFile1.Text = "...";
+            this.LblScanTitleLeft.AutoSize = true;
+            this.LblScanTitleLeft.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblScanTitleLeft.ForeColor = System.Drawing.Color.White;
+            this.LblScanTitleLeft.Location = new System.Drawing.Point(3, 0);
+            this.LblScanTitleLeft.Name = "LblFile1";
+            this.LblScanTitleLeft.Size = new System.Drawing.Size(25, 24);
+            this.LblScanTitleLeft.TabIndex = 3;
+            this.LblScanTitleLeft.Text = "...";
             // 
             // LblFile2
             // 
-            this.LblFile2.AutoSize = true;
-            this.LblFile2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblFile2.ForeColor = System.Drawing.Color.White;
-            this.LblFile2.Location = new System.Drawing.Point(3, 0);
-            this.LblFile2.Name = "LblFile2";
-            this.LblFile2.Size = new System.Drawing.Size(25, 24);
-            this.LblFile2.TabIndex = 4;
-            this.LblFile2.Text = "...";
+            this.LblScanTitleRight.AutoSize = true;
+            this.LblScanTitleRight.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblScanTitleRight.ForeColor = System.Drawing.Color.White;
+            this.LblScanTitleRight.Location = new System.Drawing.Point(3, 0);
+            this.LblScanTitleRight.Name = "LblFile2";
+            this.LblScanTitleRight.Size = new System.Drawing.Size(25, 24);
+            this.LblScanTitleRight.TabIndex = 4;
+            this.LblScanTitleRight.Text = "...";
             // 
             // splitContainer1
             // 
@@ -103,12 +103,12 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.TreLeft);
-            this.splitContainer1.Panel1.Controls.Add(this.LblFile1);
+            this.splitContainer1.Panel1.Controls.Add(this.LblScanTitleLeft);
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.TreRight);
-            this.splitContainer1.Panel2.Controls.Add(this.LblFile2);
+            this.splitContainer1.Panel2.Controls.Add(this.LblScanTitleRight);
             this.splitContainer1.Size = new System.Drawing.Size(960, 476);
             this.splitContainer1.SplitterDistance = 470;
             this.splitContainer1.TabIndex = 5;
@@ -205,8 +205,8 @@
 
         private System.Windows.Forms.TreeView TreLeft;
         private System.Windows.Forms.TreeView TreRight;
-        private System.Windows.Forms.Label LblFile1;
-        private System.Windows.Forms.Label LblFile2;
+        private System.Windows.Forms.Label LblScanTitleLeft;
+        private System.Windows.Forms.Label LblScanTitleRight;
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Panel PnlGreen;
         private System.Windows.Forms.Label LblGreen;
