@@ -37,5 +37,23 @@ namespace sysVentory.Views
             var computer = ControllerHelper.Instance.ComputerController.GetComputer(c => c.MacAddress == LstComputers.SelectedItems[0].ImageKey);
             EventHelper.Instance.EmitSelectedComputerChanged(computer, new SelectedComputerChangedEventArgs());
         }
+
+        private void CmdNewScan_Click(object sender, EventArgs e)
+        {
+            var scan = ControllerHelper.Instance.ComputerController.NewScan(MacAddressHelper.Instance.Current);
+            MessageBox.Show("Scan successfully done");
+
+            EventHelper.Instance.EmitNewScan(sender, new NewScanEventArgs(scan));
+        }
+
+        private void CmdDeleteComputer_Click(object sender, EventArgs e)
+        {
+            if (ControllerHelper.Instance.ComputerController.DeleteComputer(LstComputers.SelectedItems[0].ImageKey))
+            {
+                MessageBox.Show("Computer successfully deleted");
+                LoadComputers();
+                EventHelper.Instance.EmitSelectedComputerChanged(null, new SelectedComputerChangedEventArgs());
+            }
+        }
     }
 }

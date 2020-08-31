@@ -14,8 +14,8 @@ namespace sysVentory
             InitializeComponent();
             TreLeft.Nodes.Clear();
             TreRight.Nodes.Clear();
-            LblFile1.Text = leftScan.ScanDate.ToString("dd-MM-yyyy HH:mm");
-            LblFile2.Text = rightScan.ScanDate.ToString("dd-MM-yyyy HH:mm");
+            LblFile1.Text = leftScan.Id.ToString() + ": " + leftScan.ScanDate.ToString("dd-MM-yyyy HH:mm");
+            LblFile2.Text = rightScan.Id.ToString() + ": " + rightScan.ScanDate.ToString("dd-MM-yyyy HH:mm");
             BuildSourceTree(TreLeft, leftScan);
             BuildCompareTree(TreRight, leftScan, rightScan);
         }
@@ -34,6 +34,7 @@ namespace sysVentory
                 tv.Nodes.Add(treeNode);
             }
         }
+
         public void BuildCompareTree(TreeView tv, IScan source, IScan compare)
         {
             var groupsOfSameType = 0;

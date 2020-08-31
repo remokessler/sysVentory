@@ -15,16 +15,13 @@ namespace sysVentory.Views
         {
             InitializeComponent();
             EventHelper.Instance.OnSelectedComputerChanged += SelectedComputerChanged;
+            EventHelper.Instance.OnNewScan += NewScan;
         }
 
-        private void CmdNewScan_Click(object sender, EventArgs e)
+        private void NewScan(object sender, NewScanEventArgs e)
         {
-            var scan = ControllerHelper.Instance.ComputerController.NewScan(MacAddressHelper.Instance.Current);
-            MessageBox.Show("Scan successfully done", "Done");
-
-            EventHelper.Instance.EmitNewScan(sender, new NewScanEventArgs());
-
-            if (_selectedComputer.MacAddress == MacAddressHelper.Instance.Current)
+            var scan = e.NewScan;
+            if (_selectedComputer != null && _selectedComputer.MacAddress == MacAddressHelper.Instance.Current)
             {
                 LstScans.Items.Add(new ListViewItem(scan.ScanDate.ToString(), scan.Id));
             }
@@ -37,10 +34,10 @@ namespace sysVentory.Views
                 MessageBox.Show("Please select exactly 2 Scans. You can select multiple with holding CTRL.");
                 return;
             }
-            var scanLeft = _selectedComputer.Scans.First(s => s.Id == LstScans.SelectedItems[0].Index);
-            var scanRight = _selectedComputer.Scans.First(s => s.Id == LstScans.SelectedItems[1].Index);
+            var scanLeft = _selectedComputer.Scans.First(s => s.Id == LstScans.SelectedItems[0].ImageIndex);
+            var scanRight = _selectedComputer.Scans.First(s => s.Id == LstScans.SelectedItems[1].ImageIndex);
 
-            Form form = new FilesCompare(scanLeft, scanRight);
+            var form = new FilesCompare(scanLeft, scanRight);
             form.Owner = this;
             form.ShowInTaskbar = false;
             form.ShowDialog();
@@ -61,7 +58,25 @@ namespace sysVentory.Views
         {
             LstScans.Items.Clear();
             _selectedComputer = sender as IComputer;
-            LstScans.Items.AddRange(_selectedComputer.Scans.Select(s => new ListViewItem(s.ScanDate.ToString(), s.Id)).ToArray());
+            if (_selectedComputer != null)
+            {
+                LstScans.Items.AddRange(_selectedComputer.Scans.Select(s => new ListViewItem(s.ScanDate.ToString(), s.Id)).ToArray());
+            }
+        }
+
+        private void CmdDetails_Click(object sender, EventArgs e)
+        {
+            if (LstScans.SelectedItems?.Count != 1)
+            {
+                MessageBox.Show("Please select exactly 1 Scan.");
+                return;
+            }
+            var scanLeft = _selectedComputer.Scans.First(s => s.Id == LstScans.SelectedItems[0].ImageIndex);
+
+            var form = new ScanDetails(scanLeft);
+            form.Owner = this;
+            form.ShowInTaskbar = false;
+            form.ShowDialog();
         }
     }
 }
