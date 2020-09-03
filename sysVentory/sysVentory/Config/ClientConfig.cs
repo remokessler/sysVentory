@@ -1,19 +1,24 @@
-﻿using System.Linq;
-using System.Net.NetworkInformation;
+﻿using System.Management;
 using sysVentory.Helper;
 
 namespace sysVentory
 {
     internal class ClientConfig : IClientConfig
     {
-        public string MacAddress { get; private set; }
+        public string Uuid { get; private set; }
 
         public ClientConfig()
         {
-            MacAddress = NetworkInterface.GetAllNetworkInterfaces()
-                .Where(nic => nic.OperationalStatus == OperationalStatus.Up && nic.NetworkInterfaceType != NetworkInterfaceType.Loopback)
-                .Select(nic => nic.GetPhysicalAddress().ToString())
-                .FirstOrDefault();
+            string ComputerName = "localhost";
+            ManagementScope Scope;
+            Scope = new ManagementScope(string.Format("\\\\{0}\\root\\CIMV2", ComputerName), null);
+            Scope.Connect();
+            ObjectQuery Query = new ObjectQuery("SELECT UUID FROM Win32_ComputerSystemProduct");
+            ManagementObjectSearcher Searcher = new ManagementObjectSearcher(Scope, Query);
+            foreach (ManagementObject WmiObject in Searcher.Get())
+            {
+                Uuid = WmiObject["UUID"].ToString();
+            }
         }
     }
 }

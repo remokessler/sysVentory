@@ -28,7 +28,7 @@ namespace sysVentory.Views
         private void NewScan(object sender, NewScanEventArgs e)
         {
             var scan = e.NewScan;
-            if (_selectedComputer != null && _selectedComputer.MacAddress == _clientConifg.MacAddress)
+            if (_selectedComputer != null && _selectedComputer.MacAddress == _clientConifg.Uuid)
             {
                 LstScans.Items.Add(new ListViewItem(scan.ScanDate.ToString(), scan.Id));
                 _selectedComputer = _computerController.GetComputer(c => c.MacAddress == _selectedComputer.MacAddress);
@@ -55,7 +55,7 @@ namespace sysVentory.Views
         {
             foreach (ListViewItem lvi in LstScans.SelectedItems)
             {
-                if (_computerController.DeleteScan(_clientConifg.MacAddress, lvi.ImageIndex))
+                if (_computerController.DeleteScan(_clientConifg.Uuid, lvi.ImageIndex))
                 {
                     LstScans.Items.Remove(lvi);
                 }

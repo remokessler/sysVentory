@@ -50,7 +50,7 @@ namespace sysVentory.Views
 
         private void CmdNewScan_Click(object sender, EventArgs e)
         {
-            var scan = _computerController.NewScan(_clientConfig.MacAddress);
+            var scan = _computerController.NewScan(_clientConfig.Uuid);
             if (scan != null)
             {
                 MessageBox.Show("Scan successfully done");
