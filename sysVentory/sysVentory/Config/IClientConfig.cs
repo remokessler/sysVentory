@@ -2,6 +2,6 @@
 {
     internal interface IClientConfig
     {
-        string MacAddress { get; }
+        string Uuid { get; }
     }
 }
