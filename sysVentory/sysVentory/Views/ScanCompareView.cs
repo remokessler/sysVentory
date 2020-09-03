@@ -97,5 +97,10 @@ namespace sysVentory
             // Property is newly added
             return Color.Green;
         }
+
+        private void CmdClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
