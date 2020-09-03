@@ -39,11 +39,11 @@
             // 
             this.CmdCompare.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.CmdCompare.Depth = 0;
-            this.CmdCompare.Location = new System.Drawing.Point(552, 403);
+            this.CmdCompare.Location = new System.Drawing.Point(522, 403);
             this.CmdCompare.MouseState = MaterialSkin.MouseState.HOVER;
             this.CmdCompare.Name = "CmdCompare";
             this.CmdCompare.Primary = true;
-            this.CmdCompare.Size = new System.Drawing.Size(90, 35);
+            this.CmdCompare.Size = new System.Drawing.Size(105, 35);
             this.CmdCompare.TabIndex = 2;
             this.CmdCompare.Text = "Compare";
             this.CmdCompare.UseVisualStyleBackColor = true;
@@ -53,11 +53,11 @@
             // 
             this.CmdDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.CmdDelete.Depth = 0;
-            this.CmdDelete.Location = new System.Drawing.Point(648, 403);
+            this.CmdDelete.Location = new System.Drawing.Point(633, 403);
             this.CmdDelete.MouseState = MaterialSkin.MouseState.HOVER;
             this.CmdDelete.Name = "CmdDelete";
             this.CmdDelete.Primary = true;
-            this.CmdDelete.Size = new System.Drawing.Size(90, 35);
+            this.CmdDelete.Size = new System.Drawing.Size(105, 35);
             this.CmdDelete.TabIndex = 3;
             this.CmdDelete.Text = "Delete";
             this.CmdDelete.UseVisualStyleBackColor = true;
@@ -84,11 +84,11 @@
             // 
             this.CmdDetails.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.CmdDetails.Depth = 0;
-            this.CmdDetails.Location = new System.Drawing.Point(456, 403);
+            this.CmdDetails.Location = new System.Drawing.Point(411, 403);
             this.CmdDetails.MouseState = MaterialSkin.MouseState.HOVER;
             this.CmdDetails.Name = "CmdDetails";
             this.CmdDetails.Primary = true;
-            this.CmdDetails.Size = new System.Drawing.Size(90, 35);
+            this.CmdDetails.Size = new System.Drawing.Size(105, 35);
             this.CmdDetails.TabIndex = 5;
             this.CmdDetails.Text = "Details";
             this.CmdDetails.UseVisualStyleBackColor = true;
