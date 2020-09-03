@@ -31,5 +31,10 @@ namespace sysVentory
                 tv.Nodes.Add(treeNode);
             }
         }
+
+        private void CmdClose_Click(object sender, System.EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
