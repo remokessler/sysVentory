@@ -25,7 +25,8 @@ namespace sysVentory
             foreach (IScanInformationGroup sig in scan.ScanInformationGroup.OrderBy(g => g.Type))
             {
                 var treeNode = CreateGroupNode(sig);
-                foreach (IScanInformation si in sig.Properties)
+                var propertiesSorted = sig.Properties.OrderBy(p => p.Name).ToList();
+                foreach (IScanInformation si in propertiesSorted)
                 {
                     var childNode = new TreeNode(si.ToString());
                     childNode.ForeColor = Color.White;

@@ -31,6 +31,7 @@ namespace sysVentory.Views
             if (_selectedComputer != null && _selectedComputer.MacAddress == _clientConifg.MacAddress)
             {
                 LstScans.Items.Add(new ListViewItem(scan.ScanDate.ToString(), scan.Id));
+                _selectedComputer = _computerController.GetComputer(c => c.MacAddress == _selectedComputer.MacAddress);
             }
         }
 

@@ -22,7 +22,8 @@ namespace sysVentory
                 var treeNode = new TreeNode(sig.ToString());
                 treeNode.ForeColor = Color.White;
                 treeNode.Expand();
-                foreach (IScanInformation si in sig.Properties)
+                var propertiesSorted = sig.Properties.OrderBy(p => p.Name).ToList();
+                foreach (IScanInformation si in propertiesSorted)
                 {
                     var childNode = new TreeNode(si.ToString());
                     childNode.ForeColor = Color.White;
