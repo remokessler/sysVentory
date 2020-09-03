@@ -12,7 +12,7 @@ namespace sysVentory
             InitializeComponent();
             pnlScanedComputers.Dock = DockStyle.Top | DockStyle.Left | DockStyle.Bottom;
             LoadComputers(new ComputerOverviewView());
-            LoadHistory(new ScanOverviewView());
+            LoadScans(new ScanOverviewView());
         }
 
         private void LoadComputers(Form form)
@@ -23,7 +23,7 @@ namespace sysVentory
             form.Show();
         }
 
-        private void LoadHistory(Form form)
+        private void LoadScans(Form form)
         {
             form.TopLevel = false;
             form.Dock = DockStyle.Fill;
