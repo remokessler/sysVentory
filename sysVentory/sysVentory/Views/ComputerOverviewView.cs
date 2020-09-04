@@ -12,9 +12,13 @@ namespace sysVentory.Views
 {
     internal partial class ComputerOverviewView : Form
     {
+        /*Initialize interface IComputerController*/
         private IComputerController _computerController { get; set; }
+
+        /*Initialize interface IClientConfig*/
         private IClientConfig _clientConfig { get; set; }
 
+        /*Initialize Form*/
         public ComputerOverviewView(IComputerController computerController = null, IClientConfig clientConfig = null)
         {
             InitializeComponent();
@@ -26,11 +30,13 @@ namespace sysVentory.Views
             EventHelper.Instance.OnNewScan += OnNewScan;
         }
 
+        /*Event OnNewScan*/
         private void OnNewScan(object sender, NewScanEventArgs e)
         {
             LoadComputers();
         }
 
+        /*Load Computers into the Listview*/
         private void LoadComputers()
         {
             if (LstComputers.Items.Count > 0)
@@ -39,6 +45,7 @@ namespace sysVentory.Views
             LstComputers.Items.AddRange(_computerController.GetComputers().Select(c => new ListViewItem(c.Name, c.MacAddress)).ToArray());
         }
 
+        /*Event if selected Computer is changed*/
         private void LstComputers_SelectedComputerChanged(object sender, EventArgs e)
         {
             if (LstComputers.SelectedItems == null || LstComputers.SelectedItems.Count <= 0)
@@ -48,6 +55,7 @@ namespace sysVentory.Views
             EventHelper.Instance.EmitSelectedComputerChanged(sender, new SelectedComputerChangedEventArgs(computer));
         }
 
+        /*Button New Scan*/
         private void CmdNewScan_Click(object sender, EventArgs e)
         {
             var scan = _computerController.NewScan(_clientConfig.Uuid);
@@ -63,6 +71,7 @@ namespace sysVentory.Views
             EventHelper.Instance.EmitNewScan(sender, new NewScanEventArgs(scan));
         }
 
+        /*Button Delete Computer*/
         private void CmdDeleteComputer_Click(object sender, EventArgs e)
         {
             if (_computerController.DeleteComputer(LstComputers.SelectedItems[0].ImageKey))
@@ -78,6 +87,7 @@ namespace sysVentory.Views
             }
         }
 
+        /*Button Compare Computer*/
         private void CmdCompareComputer_Click(object sender, EventArgs e)
         {
             if (LstComputers.SelectedItems?.Count != 2)

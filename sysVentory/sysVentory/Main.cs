@@ -7,6 +7,8 @@ namespace sysVentory
     public partial class Main : Form
     {
         public EventHandler SelectedComputerChangedHandler { get; set; }
+
+        /*Initialize Main Form with the two Views inside*/
         public Main()
         {
             InitializeComponent();
@@ -15,6 +17,7 @@ namespace sysVentory
             LoadScans(new ScanOverviewView());
         }
 
+        /*Initialize Computer Form*/
         private void LoadComputers(Form form)
         {
             form.TopLevel = false;
@@ -23,6 +26,7 @@ namespace sysVentory
             form.Show();
         }
 
+        /*Initialize Scans Form*/
         private void LoadScans(Form form)
         {
             form.TopLevel = false;

@@ -9,6 +9,7 @@ namespace sysVentory
 {
     public partial class ScanCompareView : Form
     {
+        /*Initialize Form / load Labeltext*/
         public ScanCompareView(IScan leftScan, IScan rightScan, string computerNameLeft, string computerNameRight)
         {
             InitializeComponent();
@@ -20,6 +21,7 @@ namespace sysVentory
             BuildCompareTree(TreRight, leftScan, rightScan);
         }
 
+        /*Build unchanged Scangroups with color white*/
         public void BuildSourceTree(TreeView tv, IScan scan)
         {
             foreach (IScanInformationGroup sig in scan.ScanInformationGroup.OrderBy(g => g.Type))
@@ -36,6 +38,7 @@ namespace sysVentory
             }
         }
 
+        /*Build changed Scangroups*/
         public void BuildCompareTree(TreeView tv, IScan source, IScan compare)
         {
             var groupsOfSameType = 0;
@@ -69,6 +72,7 @@ namespace sysVentory
             }
         }
 
+        /*Add unchanged nodes to the group*/
         private TreeNode CreateGroupNode(IScanInformationGroup sig)
         {
             var treeNode = new TreeNode(sig.ToString());
@@ -77,6 +81,7 @@ namespace sysVentory
             return treeNode;
         }
 
+        /*Add changed nodes to the group*/
         private Color GetColorForProperty(IEnumerable<IScanInformation> removedProperties, IScanInformationGroup correspondingSoureGroup, IScanInformation currentScanInformation)
         {
             // if the property has been removed
@@ -99,6 +104,7 @@ namespace sysVentory
             return Color.Green;
         }
 
+        /*Button Close*/
         private void CmdClose_Click(object sender, EventArgs e)
         {
             this.Close();

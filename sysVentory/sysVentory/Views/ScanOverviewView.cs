@@ -10,10 +10,16 @@ namespace sysVentory.Views
 {
     internal partial class ScanOverviewView : Form
     {
+        /*Initialize interface IComputer*/
         private IComputer _selectedComputer { get; set; }
+
+        /*Initialize interface IComputerController*/
         private IComputerController _computerController { get; set; }
+
+        /*Initialize interface IClientConfig*/
         private IClientConfig _clientConifg { get; set; }
 
+        /*Initialize Form*/
         public ScanOverviewView(IComputerController computerController = null, IClientConfig clientConfig = null)
         {
             InitializeComponent();
@@ -25,6 +31,7 @@ namespace sysVentory.Views
             EventHelper.Instance.OnNewScan += NewScan;
         }
 
+        /*Update Scans*/
         private void NewScan(object sender, NewScanEventArgs e)
         {
             var scan = e.NewScan;
@@ -35,6 +42,7 @@ namespace sysVentory.Views
             }
         }
 
+        /*Button Compare*/
         private void CmdCompare_Click(object sender, EventArgs e)
         {
             if (LstScans.SelectedItems?.Count != 2)
@@ -51,6 +59,7 @@ namespace sysVentory.Views
             scanCompareView.ShowDialog();
         }
 
+        /*Button Delete*/
         private void CmdDelete_Click(object sender, EventArgs e)
         {
             foreach (ListViewItem lvi in LstScans.SelectedItems)
@@ -62,6 +71,7 @@ namespace sysVentory.Views
             }
         }
 
+        /*Event if selectet Computer is changed*/
         private void SelectedComputerChanged(object sender, SelectedComputerChangedEventArgs sccea)
         {
             LstScans.Items.Clear();
@@ -73,6 +83,7 @@ namespace sysVentory.Views
             }
         }
 
+        /*Button show details*/
         private void CmdDetails_Click(object sender, EventArgs e)
         {
             if (LstScans.SelectedItems?.Count != 1)
