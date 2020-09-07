@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace sysVentory.Model.Definitions
 {
+    // Abstraction of ComputerService
     public interface IComputerService
     {
         IComputer AddComputer(string macAddress);

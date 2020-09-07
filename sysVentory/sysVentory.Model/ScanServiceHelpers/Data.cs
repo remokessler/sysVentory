@@ -6,6 +6,7 @@ using Microsoft.Win32;
 
 namespace sysVentory.Model.ScanServiceHelpers
 {
+    /** Class given for the project */
     internal class Data : List<Item>
     {
         const string registry_key = @"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall";

@@ -1,9 +1,6 @@
-﻿using MaterialSkin;
-using System;
-using System.Drawing;
+﻿using System;
 using System.Linq;
 using System.Windows.Forms;
-using System.Windows.Forms.VisualStyles;
 using sysVentory.Controller;
 using sysVentory.Events;
 using sysVentory.Helper;
@@ -12,13 +9,9 @@ namespace sysVentory.Views
 {
     internal partial class ComputerOverviewView : Form
     {
-        /*Initialize interface IComputerController*/
         private IComputerController _computerController { get; set; }
-
-        /*Initialize interface IClientConfig*/
         private IClientConfig _clientConfig { get; set; }
 
-        /*Initialize Form*/
         public ComputerOverviewView(IComputerController computerController = null, IClientConfig clientConfig = null)
         {
             InitializeComponent();
@@ -30,13 +23,13 @@ namespace sysVentory.Views
             EventHelper.Instance.OnNewScan += OnNewScan;
         }
 
-        /*Event OnNewScan*/
+        /** Event consumer reloads all computers when a new scan is added */
         private void OnNewScan(object sender, NewScanEventArgs e)
         {
             LoadComputers();
         }
 
-        /*Load Computers into the Listview*/
+        /** Loads all Computers and adds them to the LstComputers */
         private void LoadComputers()
         {
             if (LstComputers.Items.Count > 0)
@@ -45,7 +38,7 @@ namespace sysVentory.Views
             LstComputers.Items.AddRange(_computerController.GetComputers().Select(c => new ListViewItem(c.Name, c.MacAddress)).ToArray());
         }
 
-        /*Event if selected Computer is changed*/
+        /** Event if selected Computer is changed */
         private void LstComputers_SelectedComputerChanged(object sender, EventArgs e)
         {
             if (LstComputers.SelectedItems == null || LstComputers.SelectedItems.Count <= 0)
@@ -55,7 +48,7 @@ namespace sysVentory.Views
             EventHelper.Instance.EmitSelectedComputerChanged(sender, new SelectedComputerChangedEventArgs(computer));
         }
 
-        /*Button New Scan*/
+        /** Click on add new Scan event */
         private void CmdNewScan_Click(object sender, EventArgs e)
         {
             var scan = _computerController.NewScan(_clientConfig.Uuid);
@@ -71,7 +64,7 @@ namespace sysVentory.Views
             EventHelper.Instance.EmitNewScan(sender, new NewScanEventArgs(scan));
         }
 
-        /*Button Delete Computer*/
+        /** Click on delete computer event */
         private void CmdDeleteComputer_Click(object sender, EventArgs e)
         {
             if (_computerController.DeleteComputer(LstComputers.SelectedItems[0].ImageKey))
@@ -80,14 +73,13 @@ namespace sysVentory.Views
                 LoadComputers();
                 EventHelper.Instance.EmitSelectedComputerChanged(sender, new SelectedComputerChangedEventArgs(null));
             }
-
             else
             {
                 MessageBox.Show("An Error occured while deleting!");
             }
         }
 
-        /*Button Compare Computer*/
+        /** Button open the latest scans on the selected computers */
         private void CmdCompareComputer_Click(object sender, EventArgs e)
         {
             if (LstComputers.SelectedItems?.Count != 2)

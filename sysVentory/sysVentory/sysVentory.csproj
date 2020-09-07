@@ -53,6 +53,8 @@
     <Compile Include="Events\NewScanEventArgs.cs" />
     <Compile Include="Events\SelectedComputerChangedEventArgs.cs" />
     <Compile Include="Config\IClientConfig.cs" />
+    <Compile Include="Services\ITreeService.cs" />
+    <Compile Include="Services\TreeService.cs" />
     <Compile Include="Views\ScanCompareView.cs">
       <SubType>Form</SubType>
     </Compile>

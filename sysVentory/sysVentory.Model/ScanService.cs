@@ -12,12 +12,14 @@ namespace sysVentory.Model
 
         private IDataBaseService _dataBaseService { get; set; }
         private IComputerService _computerService { get; set; }
-        public ScanService(IDataBaseService dataBaseService, IComputerService computerService)
+        public ScanService(IDataBaseService dataBaseService = null, IComputerService computerService = null)
         {
-            _dataBaseService = dataBaseService;
-            _computerService = computerService;
+            // IOC injection
+            _dataBaseService = dataBaseService ?? new DataBaseService();
+            _computerService = computerService ?? new ComputerService(dataBaseService);
         }
 
+        /** Create a new scan and add it to a Computer */
         public IScan NewScan(string macAddress)
         {
             var data = Data.Read();
@@ -45,6 +47,7 @@ namespace sysVentory.Model
             return scan;
         }
 
+        /** Delete a scan */
         public bool DeleteScan(string macAddresse, int scanId)
         {
             return _dataBaseService.DeleteScan(macAddresse, scanId);

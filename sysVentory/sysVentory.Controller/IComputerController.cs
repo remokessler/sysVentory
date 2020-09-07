@@ -4,6 +4,7 @@ using sysVentory.Model.Definitions;
 
 namespace sysVentory.Controller
 {
+    // Abstraction of Computer Controller
     public interface IComputerController
     {
         IScan NewScan(string macAddress);

@@ -3,11 +3,9 @@ using sysVentory.Model.Definitions;
 
 namespace sysVentory.Events
 {
+    /** Event arguments for when a new scan is added */
     public class NewScanEventArgs : EventArgs
     {
-        /*===========================================================*/
-        /*NewScanEventArgs.cs is an initialize of the interface IScan*/
-        /*===========================================================*/
         public IScan NewScan { get; set; }
         public NewScanEventArgs(IScan scan)
         {

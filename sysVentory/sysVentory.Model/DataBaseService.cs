@@ -18,23 +18,30 @@ namespace sysVentory.Model
             Directory.CreateDirectory(_basePath);
         }
 
+        /** Add a computer and write it to the json File */
         public IComputer AddComputer(IComputer computer)
         {
             if (computer.MacAddress == null)
+            {
                 throw new ArgumentException();
-            if (File.Exists(getPath(computer.MacAddress)))
-                throw new IOException("The file which should be created already existed under the path: " + getPath(computer.MacAddress));
-            File.WriteAllText(getPath(computer.MacAddress), JsonConvert.SerializeObject(computer));
+            }
+            if (File.Exists(GetPath(computer.MacAddress)))
+            {
+                throw new IOException("The file which should be created already existed under the path: " + GetPath(computer.MacAddress));
+            }
+
+            File.WriteAllText(GetPath(computer.MacAddress), JsonConvert.SerializeObject(computer));
             return computer;
         }
 
+        /** Add a scan to a computer and write it to the json file */
         public IComputer AddScan(IScan scan, string macAddress)
         {
-            if (!File.Exists(getPath(macAddress)))
+            if (!File.Exists(GetPath(macAddress)))
             {
                 throw new ArgumentException("MAC Adress: " + macAddress + "is not yet saved!");
             }
-            var computer = JsonConvert.DeserializeObject<Computer>(File.ReadAllText(getPath(macAddress)));
+            var computer = JsonConvert.DeserializeObject<Computer>(File.ReadAllText(GetPath(macAddress)));
 
             if (computer.Scans?.Count() == 0)
                 scan.Id = 0;
@@ -44,10 +51,11 @@ namespace sysVentory.Model
             var scans = computer.Scans?.ToList() ?? new List<IScan>();
             scans.Add(scan);
             computer.Scans = scans;
-            File.WriteAllText(getPath(macAddress), JsonConvert.SerializeObject(computer));
+            File.WriteAllText(GetPath(macAddress), JsonConvert.SerializeObject(computer));
             return computer;
         }
 
+        /** Get Computers from file */
         public IEnumerable<IComputer> GetComputers(Func<IComputer, bool> condition = null)
         {
             try
@@ -62,14 +70,17 @@ namespace sysVentory.Model
             }
         }
 
+        /** Delete a computer */
         public bool DeleteComputer(string macAddress)
         {
             if (string.IsNullOrWhiteSpace(macAddress))
+            {
                 return false;
+            }
 
             try
             {
-                File.Delete(getPath(macAddress));
+                File.Delete(GetPath(macAddress));
                 return true;
             }
             catch (Exception)
@@ -77,18 +88,22 @@ namespace sysVentory.Model
                 return false;
             }
         }
+
+        /** Delete a Scan */
         public bool DeleteScan(string macAddress, int scanId)
         {
             if (string.IsNullOrWhiteSpace(macAddress) || scanId < 0)
+            {
                 return false;
+            }
 
             try
             {
-                var computer = JsonConvert.DeserializeObject<Computer>(File.ReadAllText(getPath(macAddress)));
+                var computer = JsonConvert.DeserializeObject<Computer>(File.ReadAllText(GetPath(macAddress)));
                 var scans = computer.Scans.ToList();
                 scans.Remove(computer.Scans.First(s => s.Id == scanId));
                 computer.Scans = scans;
-                File.WriteAllText(getPath(computer.MacAddress), JsonConvert.SerializeObject(computer));
+                File.WriteAllText(GetPath(computer.MacAddress), JsonConvert.SerializeObject(computer));
                 return true;
             }
             catch (Exception)
@@ -97,7 +112,8 @@ namespace sysVentory.Model
             }
         }
 
-        private string getPath(string macAddress)
+        /* combines the Path to a file */
+        private string GetPath(string macAddress)
         {
             return Path.Combine(_basePath, macAddress + file_ending);
         }

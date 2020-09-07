@@ -18,6 +18,8 @@ namespace sysVentory
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            
+            // set button font size.
             MaterialSkinManager.Instance.ROBOTO_MEDIUM_10 = new Font(MaterialSkinManager.Instance.ROBOTO_MEDIUM_12.FontFamily, 12);
             Application.Run(new Main());
         }
