@@ -6,6 +6,9 @@ namespace sysVentory.Helper
 {
     public class EventHelper
     {
+        /*======================================================================================================*/
+        /*EventHelper.cs is necessary to start an event if a selectet Computer is changed or a new Scan is added*/
+        /*======================================================================================================*/
         public event EventHandler<SelectedComputerChangedEventArgs> OnSelectedComputerChanged;
         public event EventHandler<NewScanEventArgs> OnNewScan;
         public static EventHelper Instance => _instance = _instance ?? new EventHelper();

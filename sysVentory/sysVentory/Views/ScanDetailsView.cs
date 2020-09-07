@@ -7,6 +7,7 @@ namespace sysVentory
 {
     public partial class ScanDetailsView : Form
     {
+        /*Initialize Form*/
         public ScanDetailsView(IScan scan, string computerName)
         {
             InitializeComponent();
@@ -15,6 +16,7 @@ namespace sysVentory
             BuildTree(TreScan, scan);
         }
 
+        /*Build Treeview*/
         public void BuildTree(TreeView tv, IScan scan)
         {
             foreach (IScanInformationGroup sig in scan.ScanInformationGroup.OrderBy(g => g.Type))
@@ -33,6 +35,7 @@ namespace sysVentory
             }
         }
 
+        /*Button Close*/
         private void CmdClose_Click(object sender, System.EventArgs e)
         {
             this.Close();
