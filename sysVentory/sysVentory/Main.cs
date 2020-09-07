@@ -6,19 +6,15 @@ namespace sysVentory
 {
     public partial class Main : Form
     {
-        public EventHandler SelectedComputerChangedHandler { get; set; }
-
-        /*Initialize Main Form with the two Views inside*/
         public Main()
         {
             InitializeComponent();
             pnlScanedComputers.Dock = DockStyle.Top | DockStyle.Left | DockStyle.Bottom;
-            LoadComputers(new ComputerOverviewView());
-            LoadScans(new ScanOverviewView());
+            LoadComputersForm(new ComputerOverviewView());
+            LoadScansForm(new ScanOverviewView());
         }
 
-        /*Initialize Computer Form*/
-        private void LoadComputers(Form form)
+        private void LoadComputersForm(Form form)
         {
             form.TopLevel = false;
             form.Dock = DockStyle.Fill;
@@ -26,8 +22,7 @@ namespace sysVentory
             form.Show();
         }
 
-        /*Initialize Scans Form*/
-        private void LoadScans(Form form)
+        private void LoadScansForm(Form form)
         {
             form.TopLevel = false;
             form.Dock = DockStyle.Fill;

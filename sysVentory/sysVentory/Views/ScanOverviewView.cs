@@ -10,28 +10,24 @@ namespace sysVentory.Views
 {
     internal partial class ScanOverviewView : Form
     {
-        /*Initialize interface IComputer*/
         private IComputer _selectedComputer { get; set; }
-
-        /*Initialize interface IComputerController*/
         private IComputerController _computerController { get; set; }
-
-        /*Initialize interface IClientConfig*/
         private IClientConfig _clientConifg { get; set; }
 
-        /*Initialize Form*/
         public ScanOverviewView(IComputerController computerController = null, IClientConfig clientConfig = null)
         {
             InitializeComponent();
 
+            // IOC injection
             _computerController = computerController ?? new ComputerController();
             _clientConifg = clientConfig ?? new ClientConfig();
 
+            // registration of events
             EventHelper.Instance.OnSelectedComputerChanged += SelectedComputerChanged;
             EventHelper.Instance.OnNewScan += NewScan;
         }
 
-        /*Update Scans*/
+        /** On new scan event handler reloads the currently selected computer. */
         private void NewScan(object sender, NewScanEventArgs e)
         {
             var scan = e.NewScan;
@@ -42,7 +38,7 @@ namespace sysVentory.Views
             }
         }
 
-        /*Button Compare*/
+        /** Open compare clicked and open form */
         private void CmdCompare_Click(object sender, EventArgs e)
         {
             if (LstScans.SelectedItems?.Count != 2)
@@ -59,7 +55,7 @@ namespace sysVentory.Views
             scanCompareView.ShowDialog();
         }
 
-        /*Button Delete*/
+        /** Delete scan clicked. Deletes said scan and removes it from the UI. */
         private void CmdDelete_Click(object sender, EventArgs e)
         {
             foreach (ListViewItem lvi in LstScans.SelectedItems)
@@ -71,7 +67,7 @@ namespace sysVentory.Views
             }
         }
 
-        /*Event if selectet Computer is changed*/
+        /** Selected computer changed updates list of scans*/
         private void SelectedComputerChanged(object sender, SelectedComputerChangedEventArgs sccea)
         {
             LstScans.Items.Clear();
@@ -83,7 +79,7 @@ namespace sysVentory.Views
             }
         }
 
-        /*Button show details*/
+        /** Open Details form. */
         private void CmdDetails_Click(object sender, EventArgs e)
         {
             if (LstScans.SelectedItems?.Count != 1)

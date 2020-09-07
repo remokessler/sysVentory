@@ -3,6 +3,7 @@ using System.Collections.Generic;
 
 namespace sysVentory.Model.Definitions
 {
+    // Abstraction of DataBaseService
     public interface IDataBaseService
     {
         IComputer AddComputer(IComputer computer);

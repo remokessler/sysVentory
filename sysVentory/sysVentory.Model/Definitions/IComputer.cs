@@ -2,6 +2,7 @@
 
 namespace sysVentory.Model.Definitions
 {
+    // Abstraction of Computer
     public interface IComputer
     {
         string Name { get; set; }

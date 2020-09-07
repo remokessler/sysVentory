@@ -4,11 +4,9 @@ using sysVentory.Model.Definitions;
 
 namespace sysVentory.Helper
 {
+    /** Singleton class to subscribe and emit events */
     public class EventHelper
     {
-        /*======================================================================================================*/
-        /*EventHelper.cs is necessary to start an event if a selectet Computer is changed or a new Scan is added*/
-        /*======================================================================================================*/
         public event EventHandler<SelectedComputerChangedEventArgs> OnSelectedComputerChanged;
         public event EventHandler<NewScanEventArgs> OnNewScan;
         public static EventHelper Instance => _instance = _instance ?? new EventHelper();
@@ -19,11 +17,13 @@ namespace sysVentory.Helper
 
         }
 
+        /** Emits an event to notify all members that a computer is changed in the view */
         public void EmitSelectedComputerChanged(object sender, SelectedComputerChangedEventArgs sccea)
         {
             OnSelectedComputerChanged(sender, sccea);
         }
 
+        /** Emits an event to notify all members that a new scan is added */
         public void EmitNewScan(object sender, NewScanEventArgs nsea)
         {
             OnNewScan(sender, nsea);

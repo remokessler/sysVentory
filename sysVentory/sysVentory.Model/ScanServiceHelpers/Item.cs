@@ -3,6 +3,7 @@ using sysVentory.Model.Definitions;
 
 namespace sysVentory.Model.ScanServiceHelpers
 {
+    /** Class given for the project modified to be object orientated */
     internal class Item : IScanInformationGroup
     {
         public string Type { get; set; }

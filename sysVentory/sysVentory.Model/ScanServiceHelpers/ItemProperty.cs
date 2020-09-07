@@ -2,6 +2,7 @@
 
 namespace sysVentory.Model.ScanServiceHelpers
 {
+    /** Class given for the project */
     internal class ItemProperty : IScanInformation
     {
         public string Name { get; set; }

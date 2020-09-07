@@ -2,6 +2,7 @@
 
 namespace sysVentory.Model.Definitions
 {
+    // Abstraction of ScanInformationGroup
     public interface IScanInformationGroup
     {
         string Type { get; set; }

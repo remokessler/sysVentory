@@ -5,11 +5,9 @@ namespace sysVentory
 {
     internal class ClientConfig : IClientConfig
     {
-        /*=================================================================*/
-        /*ClientConfig.cs reads the UUID of the Computer for the .json File*/
-        /*=================================================================*/
         public string Uuid { get; private set; }
 
+        /** ClientConfig reads the UUID of the computer to uniquely identify it */
         public ClientConfig()
         {
             string ComputerName = "localhost";

@@ -1,6 +1,6 @@
 ﻿namespace sysVentory.Helper
 {
-    //interface of the UUID reader
+    // abstraction of ClientConfig
     internal interface IClientConfig
     {
         string Uuid { get; }

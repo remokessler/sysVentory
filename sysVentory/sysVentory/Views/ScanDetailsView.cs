@@ -2,43 +2,28 @@
 using System.Linq;
 using System.Windows.Forms;
 using sysVentory.Model.Definitions;
+using sysVentory.Services;
 
 namespace sysVentory
 {
     public partial class ScanDetailsView : Form
     {
-        /*Initialize Form*/
-        public ScanDetailsView(IScan scan, string computerName)
+        public ScanDetailsView(IScan scan, string computerName, ITreeService treeService = null)
         {
             InitializeComponent();
+
+            // IOC injection
+            treeService = treeService ?? new TreeService();
+
             TreScan.Nodes.Clear();
             LblScanTitle.Text = $"Computer: {computerName ?? string.Empty} | Scan: {scan.Id.ToString()} from {scan.ScanDate.ToString("dd-MM-yyyy HH:mm")}";
-            BuildTree(TreScan, scan);
+            treeService.BuildTree(TreScan, scan);
         }
 
-        /*Build Treeview*/
-        public void BuildTree(TreeView tv, IScan scan)
-        {
-            foreach (IScanInformationGroup sig in scan.ScanInformationGroup.OrderBy(g => g.Type))
-            {
-                var treeNode = new TreeNode(sig.ToString());
-                treeNode.ForeColor = Color.White;
-                treeNode.Expand();
-                var propertiesSorted = sig.Properties.OrderBy(p => p.Name).ToList();
-                foreach (IScanInformation si in propertiesSorted)
-                {
-                    var childNode = new TreeNode(si.ToString());
-                    childNode.ForeColor = Color.White;
-                    treeNode.Nodes.Add(childNode);
-                }
-                tv.Nodes.Add(treeNode);
-            }
-        }
-
-        /*Button Close*/
+        /** Button close */
         private void CmdClose_Click(object sender, System.EventArgs e)
         {
-            this.Close();
+            Close();
         }
     }
 }
