@@ -1,10 +1,15 @@
 # Highlights
-Der Moment, in dem die Applikation funktioniert hat
+
+- Farbliches Highlighting für die Compares für Insert, Update und Delete.
+- Flat Design.
+- Optionalanforderung des Klassendiagramms.
+- Optionalanforderung des Compares zweier Computers.
+- Identifikation via UUID
 
 # Verbesserungsvorschläge:
 
-- Suche nach Geräten aus der Liste "Select Computer"
-- Auswahl mehrerer Sprachen möglich
-- Verbessertes responsive design
-- Compare window in die Main-Form integrieren
-
+- Suche nach Geräten aus der Liste "Select Computer".
+- Mehrsprachigkeit.
+- Verbessertes responsive Design.
+- Compare-Window und Detail-Window in die Main-Form integrieren.
+- Animation der Buttons asynchron ausführen lassen.
