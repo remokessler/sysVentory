@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="sysVentory.Model.ComputerService" BaseTypeListCollapsed="true">
+    <Position X="10.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAIAAAA=</HashCode>
+      <FileName>ComputerService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="sysVentory.Model.DataBaseService" BaseTypeListCollapsed="true">
+    <Position X="19.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAACAAAAAAAAAAAAAAQAACABAAAABAEAIAAAA=</HashCode>
+      <FileName>DataBaseService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="sysVentory.Model.ScanService" BaseTypeListCollapsed="true">
+    <Position X="3.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAEgAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>ScanService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="sysVentory.Model.Definitions.Types.Computer" BaseTypeListCollapsed="true">
+    <Position X="1.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACEAAAAgAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Definitions\Types\Computer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="sysVentory.Model.Definitions.Types.Scan" BaseTypeListCollapsed="true">
+    <Position X="14.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Definitions\Types\Scan.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="sysVentory.Model.Definitions.Types.ScanInformation" BaseTypeListCollapsed="true">
+    <Position X="5.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAQAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Definitions\Types\ScanInformation.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="sysVentory.Model.Definitions.Types.ScanInformationGroup" BaseTypeListCollapsed="true">
+    <Position X="17" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAQAAAAACAAA=</HashCode>
+      <FileName>Definitions\Types\ScanInformationGroup.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="sysVentory.Model.Definitions.Types.Deserializer.ScanConverter">
+    <Position X="21.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQQAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Definitions\Types\Deserializer\ScanConverter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sysVentory.Model.Definitions.Types.Deserializer.ScanInformationConverter">
+    <Position X="23.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQQAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Definitions\Types\Deserializer\ScanInformationConverter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sysVentory.Model.Definitions.Types.Deserializer.ScanInformationGroupConverter">
+    <Position X="25.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQQAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Definitions\Types\Deserializer\ScanInformationGroup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sysVentory.Model.ScanServiceHelpers.Data">
+    <Position X="0.5" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAgAAAAAAAIAAAAAAAAAAAgAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <FileName>ScanServiceHelpers\Data.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sysVentory.Model.ScanServiceHelpers.Item" BaseTypeListCollapsed="true">
+    <Position X="8" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAACAAA=</HashCode>
+      <FileName>ScanServiceHelpers\Item.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="sysVentory.Model.ScanServiceHelpers.ItemProperty" BaseTypeListCollapsed="true">
+    <Position X="12.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>ScanServiceHelpers\ItemProperty.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="System.Object">
+    <Position X="10.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.Collections.Generic.List&lt;T&gt;">
+    <Position X="0.5" Y="7.75" Width="1.5" />
+    <NestedTypes>
+      <Struct Name="System.Collections.Generic.List&lt;T&gt;.Enumerator" Collapsed="true">
+        <TypeIdentifier />
+        <Lollipop Position="0.2" />
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="sysVentory.Model.Definitions.IComputer">
+    <Position X="21.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAgAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Definitions\IComputer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="sysVentory.Model.Definitions.IComputerService">
+    <Position X="23.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAIAAAA=</HashCode>
+      <FileName>Definitions\IComputerService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="sysVentory.Model.Definitions.IDataBaseService">
+    <Position X="25.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAACAAAAAAAAAAAAAAAAAAABAAAAAAEAIAAAA=</HashCode>
+      <FileName>Definitions\IDataBaseService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="sysVentory.Model.Definitions.IScan">
+    <Position X="21.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Definitions\IScan.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="sysVentory.Model.Definitions.IScanInformation">
+    <Position X="23.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Definitions\IScanInformation.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="sysVentory.Model.Definitions.IScanInformationGroup">
+    <Position X="25.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAACAAA=</HashCode>
+      <FileName>Definitions\IScanInformationGroup.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="sysVentory.Model.Definitions.IScanService">
+    <Position X="21.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Definitions\IScanService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

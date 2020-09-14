@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="sysVentory.ClientConfig" BaseTypeListCollapsed="true">
+    <Position X="10.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Config\ClientConfig.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="sysVentory.Main">
+    <Position X="10.25" Y="9" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIACAAAAAAAACAgAACAAAAAAAAAACAAAABAAA=</HashCode>
+      <FileName>Main.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sysVentory.Program">
+    <Position X="20" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sysVentory.ScanCompareView">
+    <Position X="12.75" Y="9" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAIQAAAAACAAAAAAIgCAQAAmACAAAUAAAAACAChIAAA=</HashCode>
+      <FileName>Views\ScanCompareView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sysVentory.ScanDetailsView">
+    <Position X="1" Y="9" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAACAAAAAAIACBAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Views\ScanDetailsView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sysVentory.Helper.EventHelper">
+    <Position X="15.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIEAAgAAAEAAAAAAABAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Events\EventHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sysVentory.Events.NewScanEventArgs">
+    <Position X="0.5" Y="15.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Events\NewScanEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sysVentory.Events.SelectedComputerChangedEventArgs">
+    <Position X="3" Y="15.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Events\SelectedComputerChangedEventArgs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sysVentory.Properties.Resources">
+    <Position X="17.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sysVentory.Properties.Settings">
+    <Position X="0.5" Y="3.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sysVentory.Services.TreeService" BaseTypeListCollapsed="true">
+    <Position X="13" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\TreeService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="sysVentory.Views.ComputerOverviewView">
+    <Position X="3.5" Y="9" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AACAgAgQCiAAAAAAIADAAAACAABAACAAABAABAAAAAI=</HashCode>
+      <FileName>Views\ComputerOverviewView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="sysVentory.Views.ScanOverviewView">
+    <Position X="7.25" Y="9" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQCCgAAAACAACEAIACQAAAQAQAEAAAAACAABg=</HashCode>
+      <FileName>Views\ScanOverviewView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="System.Object" Collapsed="true">
+    <Position X="14" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.Windows.Forms.Form" Collapsed="true">
+    <Position X="7" Y="7.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.EventArgs" Collapsed="true">
+    <Position X="2.5" Y="14.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.Configuration.ApplicationSettingsBase" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.75" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.Windows.Forms.ContainerControl" Collapsed="true">
+    <Position X="7" Y="6.25" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.Configuration.SettingsBase" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="System.Windows.Forms.ScrollableControl" Collapsed="true">
+    <Position X="7" Y="4.75" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.Windows.Forms.Control" Collapsed="true">
+    <Position X="7" Y="3.25" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.ComponentModel.Component" Collapsed="true">
+    <Position X="7" Y="1.75" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="System.MarshalByRefObject" Collapsed="true">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Interface Name="sysVentory.Helper.IClientConfig">
+    <Position X="20" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Config\IClientConfig.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="sysVentory.Services.ITreeService">
+    <Position X="21.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Services\ITreeService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
