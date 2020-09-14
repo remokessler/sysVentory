@@ -15,7 +15,7 @@
       <FileName>Main.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="sysVentory.Program">
+  <Class Name="sysVentory.Program" Collapsed="true">
     <Position X="20" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
@@ -136,15 +136,15 @@
     <Position X="7" Y="0.5" Width="1.5" />
     <TypeIdentifier />
   </Class>
-  <Interface Name="sysVentory.Helper.IClientConfig">
-    <Position X="20" Y="2.25" Width="1.5" />
+  <Interface Name="sysVentory.Helper.IClientConfig" Collapsed="true">
+    <Position X="20" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Config\IClientConfig.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="sysVentory.Services.ITreeService">
-    <Position X="21.75" Y="2.25" Width="1.5" />
+  <Interface Name="sysVentory.Services.ITreeService" Collapsed="true">
+    <Position X="21.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Services\ITreeService.cs</FileName>

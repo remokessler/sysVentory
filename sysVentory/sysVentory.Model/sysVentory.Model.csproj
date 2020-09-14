@@ -68,6 +68,7 @@
     <Compile Include="ScanServiceHelpers\ItemProperty.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ClassDiagram_model.cd" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
